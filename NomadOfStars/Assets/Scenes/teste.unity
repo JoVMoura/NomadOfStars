@@ -424,7 +424,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2adf1156bda26224c915f22c4cc45898, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2707,6 +2707,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  breakSound: {fileID: 0}
   item_Animator: {fileID: 88223252}
   shoot: 0
   usable: 0
@@ -3397,63 +3398,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136934825}
   m_CullTransparentMesh: 1
---- !u!1001 &3066965326093164656
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -127.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878950365388576820, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765881377525554853, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
-      propertyPath: m_Name
-      value: Tesla
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3467,5 +3411,4 @@ SceneRoots:
   - {fileID: 1328720366}
   - {fileID: 1536441911}
   - {fileID: 137216407}
-  - {fileID: 3066965326093164656}
   - {fileID: 461897887}
