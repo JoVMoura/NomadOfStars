@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895ee247774d64e4bbb32ec56841f3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: 90402970eab6ebd41b7829a23d06a1bb, type: 3}
 --- !u!70 &6103113958342505907
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,18 +1,19 @@
-using System;
+using System.Collections;
 using UnityEngine;
-using UnityEditor;
 using UnityEngine.InputSystem;
+
 public class HoldingControl : MonoBehaviour
 {
     [SerializeField] private Camera cam;
     [SerializeField] private GameObject dropArvorePrefab;
     [SerializeField] private GameObject dropPedraPrefab;
     [SerializeField] private LayerMask layerMask;
-    
+    [SerializeField] private AudioClip breakSound; // Áudio de quebra
+
     public Animator item_Animator;
     [HideInInspector] public bool shoot;
     [HideInInspector] public bool usable;
-    
+
     private InputAction useAction;
     private InputAction pointAction;
     private Vector2 mousePos;
@@ -53,19 +54,32 @@ public class HoldingControl : MonoBehaviour
             GameObject hitObject = hit.collider.gameObject;
             Debug.Log("Objeto que o mouse achou => " + hitObject.name);
 
-            // Verifica a tag do objeto e instancia o drop correspondente
-            if (hitObject.CompareTag("arvore"))
-            {
-                Instantiate(dropArvorePrefab, hitObject.transform.position, Quaternion.identity);
-            }
-            else if (hitObject.CompareTag("pedra"))
-            {
-                Instantiate(dropPedraPrefab, hitObject.transform.position, Quaternion.identity);
-            }
-
-            // Destroi o objeto atingido
-            Destroy(hitObject);
+            // Inicia o processo de destruição e geração do drop
+            StartCoroutine(BreakItem(hitObject));
         }
+    }
+
+    IEnumerator BreakItem(GameObject hitObject)
+    {
+        // Toca o som de quebra no ponto do objeto
+        AudioSource.PlayClipAtPoint(breakSound, hitObject.transform.position, 5.5f);
+
+
+        // Aguarda 2 segundos antes de destruir e gerar o drop
+        yield return new WaitForSeconds(2f);
+
+        // Verifica a tag do objeto e instancia o drop correspondente
+        if (hitObject.CompareTag("arvore"))
+        {
+            Instantiate(dropArvorePrefab, hitObject.transform.position, Quaternion.identity);
+        }
+        else if (hitObject.CompareTag("pedra"))
+        {
+            Instantiate(dropPedraPrefab, hitObject.transform.position, Quaternion.identity);
+        }
+
+        // Destroi o objeto atingido
+        Destroy(hitObject);
     }
 
     void TrocarItem(HeldItem item)
