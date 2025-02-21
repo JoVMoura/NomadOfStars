@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 9d613c8d288fbeb46bdb73d99228cdf3
+guid: a87af0e928d21834bab2cab61f813056
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2576230238667949292
-    second: tesla_0
+      213: 8891140915739170783
+    second: UI_pause_0
+  - first:
+      213: 8940138238968990691
+    second: UI_pause_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -111,7 +114,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -124,7 +127,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,23 +142,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tesla_0
+      name: UI_pause_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 115
-        width: 496
-        height: 1121
+        x: 1816
+        y: 1016
+        width: 52
+        height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41bb3945f346f3cd0800000000000000
-      internalID: -2576230238667949292
+      spriteID: fd7139a3e8da36b70800000000000000
+      internalID: 8891140915739170783
       vertices: []
       indices: 
       edges: []
@@ -174,7 +177,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tesla_0: -2576230238667949292
+      UI_pause_0: 8891140915739170783
+      UI_pause_1: 8940138238968990691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

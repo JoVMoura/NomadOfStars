@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9d613c8d288fbeb46bdb73d99228cdf3
+guid: d2c0875e10a93754e8b78d1f62fe4e9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2576230238667949292
-    second: tesla_0
+      213: 7528296516132250456
+    second: RangeVisu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -111,7 +111,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -124,7 +124,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tesla_0
+      name: RangeVisu_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 115
-        width: 496
-        height: 1121
+        x: 0
+        y: 0
+        width: 640
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41bb3945f346f3cd0800000000000000
-      internalID: -2576230238667949292
+      spriteID: 853afd77bc1e97860800000000000000
+      internalID: 7528296516132250456
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tesla_0: -2576230238667949292
+      RangeVisu_0: 7528296516132250456
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
