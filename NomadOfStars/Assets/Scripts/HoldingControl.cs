@@ -13,6 +13,7 @@ public class HoldingControl : MonoBehaviour
     public Animator item_Animator;
     [HideInInspector] public bool shoot;
     [HideInInspector] public bool usable;
+    private bool quebrando;
 
     private InputAction useAction;
     private InputAction pointAction;
@@ -23,6 +24,7 @@ public class HoldingControl : MonoBehaviour
         useAction = InputSystem.actions.FindAction("Use");
         pointAction = InputSystem.actions.FindAction("Point");
 
+        quebrando = false;
         shoot = false;
         usable = true;
     }
@@ -49,13 +51,17 @@ public class HoldingControl : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero, Mathf.Infinity, layerMask);
 
         // Se o raycast atingiu um objeto e o botão de uso foi pressionado neste frame
-        if (hit.collider != null && useAction.WasPressedThisFrame())
+        if (hit.collider != null && useAction.WasPressedThisFrame() && (hit.collider.CompareTag("arvore") || hit.collider.CompareTag("pedra")))
         {
             GameObject hitObject = hit.collider.gameObject;
-            Debug.Log("Objeto que o mouse achou => " + hitObject.name);
+            //Debug.Log("Objeto que o mouse achou => " + hitObject.name);
 
             // Inicia o processo de destruição e geração do drop
-            StartCoroutine(BreakItem(hitObject));
+            if(!quebrando)
+            {
+                quebrando = true;
+                StartCoroutine(BreakItem(hitObject));   
+            }
         }
     }
 
@@ -79,6 +85,7 @@ public class HoldingControl : MonoBehaviour
         }
 
         // Destroi o objeto atingido
+        quebrando = false;
         Destroy(hitObject);
     }
 

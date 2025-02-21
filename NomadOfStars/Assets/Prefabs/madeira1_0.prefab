@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8218616880692539038}
   - component: {fileID: 1308666210988064287}
   - component: {fileID: 5437531612513812617}
-  - component: {fileID: 6488043288269946646}
+  - component: {fileID: 6444199911315458580}
   m_Layer: 0
   m_Name: madeira1_0
   m_TagString: dropM
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: 90402970eab6ebd41b7829a23d06a1bb, type: 3}
---- !u!70 &6488043288269946646
-CapsuleCollider2D:
+--- !u!61 &6444199911315458580
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,6 +136,15 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 46, y: 20.7}
-  m_Direction: 0
+  m_Offset: {x: 0.0000038146973, y: 0.052093506}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 46, y: 20.7}
+    newSize: {x: 46, y: 20.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 51.62612, y: 29.764297}
+  m_EdgeRadius: 0
