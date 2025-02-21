@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6488043288269946646}
   m_Layer: 0
   m_Name: madeira1_0
-  m_TagString: Untagged
+  m_TagString: dropM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6103113958342505907}
   m_Layer: 0
   m_Name: pedra_drop2_0
-  m_TagString: Untagged
+  m_TagString: dropP
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
