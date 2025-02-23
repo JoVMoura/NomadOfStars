@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using System;
 
 public class DropItem : MonoBehaviour
 {
@@ -18,11 +20,12 @@ public class DropItem : MonoBehaviour
                 // Verifica se este drop é de madeira ou de pedra e atualiza a variável correspondente
                 if (gameObject.CompareTag("dropM"))
                 {
-                    inventory.drop_madeira++; // Atualiza a variável de drop de madeira
+                    inventory.drop_madeira_count();
+
                 }
                 else if (gameObject.CompareTag("dropP"))
                 {
-                    inventory.drop_pedra++; // Atualiza a variável de drop de pedra
+                    inventory.drop_pedra_count();
                 }
             }
 

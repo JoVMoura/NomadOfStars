@@ -1,3 +1,5 @@
+using System;
+using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -5,57 +7,87 @@ using UnityEngine.InputSystem;
 public class PlaceTower : MonoBehaviour
 {
     [SerializeField] private Camera cam;
+    [SerializeField] private UI_control ui_control;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private Grid grid;
     [SerializeField] private  PlayerInventory playerInventory;
     [SerializeField] private Torres towers;
-    private GameObject actualTower;
+    private InputAction buildAction;
+    private InputAction useAction;
     private InputAction pointAction;
+    private bool possuiObjeto;
+    private Vector3 mousePosition;
+    private Vector3 lastDetectedPosition;
+    private bool inMenu;
+    private GameObject actualTower;
     void Start()
     {
+        lastDetectedPosition = new Vector3(100000,100000,0);
+        mousePosition = new Vector3(1,1,0);
+        possuiObjeto = false;
+        inMenu = false;
+        useAction = InputSystem.actions.FindAction("use");
+        buildAction = InputSystem.actions.FindAction("Build");
         pointAction = InputSystem.actions.FindAction("Point");
     }
 
     public void StartPlacement(int ID)
     {
-        if(towers.objectsData[ID].WoodPrice >= playerInventory.drop_madeira && towers.objectsData[ID].StonePrice >= playerInventory.drop_pedra)
+        if(towers.objectsData[ID].WoodPrice <= playerInventory.drop_madeira && towers.objectsData[ID].StonePrice <= playerInventory.drop_pedra)
         {
-            //Fechar tela de seleção
-            actualTower = towers.objectsData[ID].Struct;
-            SpriteRenderer actualTowerSP = actualTower.transform.GetChild(0).GetComponent<SpriteRenderer>();
-            actualTowerSP.color = new Vector4(actualTowerSP.color.r, actualTowerSP.color.g, actualTowerSP.color.b, 0.5f);
+            ui_control.FecharBuild();
+            inMenu = false;
+            possuiObjeto = true;
+            actualTower = Instantiate(towers.objectsData[ID].Struct, mousePosition, Quaternion.identity);
             actualTower.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
+
+            playerInventory.tirar_madeira(towers.objectsData[ID].WoodPrice);
+            playerInventory.tirar_pedra(towers.objectsData[ID].StonePrice);
+        }
+        else
+        {
+            //error
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 lastDetectedPosition = new Vector3(10000,10000,10000);
-        Vector3 mousePosition = GetSelectedMapPosition();
-        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        if(lastDetectedPosition != gridPosition)
+        if(buildAction.WasPressedThisFrame() && !inMenu && !possuiObjeto)
         {
-            actualTower.transform.position = gridPosition;
-            lastDetectedPosition = gridPosition;
+            inMenu = true;
+            ui_control.AbriBuild();
+        }
+        else if(buildAction.WasPressedThisFrame() && inMenu)
+        {
+            inMenu = false;
+            ui_control.FecharBuild();
+        }
+
+        if(possuiObjeto)
+        {
+            mousePosition = GetSelectedMapPosition();
+            Vector3Int gridPosition = grid.WorldToCell(mousePosition) * 64;
+            Debug.Log(gridPosition);
+            if(lastDetectedPosition != gridPosition)
+            {
+                actualTower.transform.position = gridPosition;
+                lastDetectedPosition = gridPosition;
+            }
+        }
+        if(possuiObjeto && useAction.WasPressedThisFrame())
+        {
+            actualTower.transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
+            actualTower = null;
+            possuiObjeto = false;
         }
     }
 
-     public Vector3 GetSelectedMapPosition()
+    public Vector3 GetSelectedMapPosition()
     {
-        Vector3 lastPosition = new Vector3(0,0,0);
         Vector2 mousePos = pointAction.ReadValue<Vector2>();
         Vector2 worldPos = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.nearClipPlane));
 
-        // Realiza o raycast utilizando a layermask para otimizar a performance
-        RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero, Mathf.Infinity, layerMask);
-
-        // Se o raycast atingiu um objeto e o botão de uso foi pressionado neste frame
-        if (hit.collider != null)
-        {
-            lastPosition = hit.point;
-        }
-
-        return lastPosition;
+        return worldPos;
     }
 }

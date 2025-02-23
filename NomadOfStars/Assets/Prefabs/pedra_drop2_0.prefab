@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1097755489933167719}
   - component: {fileID: 7974431492691808906}
   - component: {fileID: 6684694076731437537}
-  - component: {fileID: 6103113958342505907}
+  - component: {fileID: 8136265476636301918}
   m_Layer: 0
   m_Name: pedra_drop2_0
   m_TagString: dropP
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: 90402970eab6ebd41b7829a23d06a1bb, type: 3}
---- !u!70 &6103113958342505907
-CapsuleCollider2D:
+--- !u!61 &8136265476636301918
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,6 +136,15 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 33, y: 31.2}
-  m_Direction: 0
+  m_Offset: {x: 0.10655308, y: -0.053274155}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 33, y: 31.2}
+    newSize: {x: 33, y: 31.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 38.327568, y: 35.781704}
+  m_EdgeRadius: 0

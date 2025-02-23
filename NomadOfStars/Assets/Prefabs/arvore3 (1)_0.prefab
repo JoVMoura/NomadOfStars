@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1817710153501773861}
   - component: {fileID: 7510023390683152683}
-  - component: {fileID: 4542951419033315522}
+  - component: {fileID: 7556034733815553652}
+  - component: {fileID: 1984416495494997609}
   m_Layer: 0
   m_Name: arvore3 (1)_0
   m_TagString: arvore
@@ -74,9 +75,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -769686325
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 8994141217815651186, guid: e4d34b1cf8a59b445995625ea8d97894, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -87,9 +88,9 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!70 &4542951419033315522
-CapsuleCollider2D:
+  m_SpriteSortPoint: 1
+--- !u!61 &7556034733815553652
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,6 +123,61 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.469452, y: -34.25283}
-  m_Size: {x: 8.130524, y: 49.194336}
-  m_Direction: 0
+  m_Offset: {x: -0.0743103, y: -3.546358}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.45, y: 0.11}
+    oldSize: {x: 57.4, y: 117.7}
+    newSize: {x: 57.4, y: 117.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8.017609, y: 18.65633}
+  m_EdgeRadius: 0
+--- !u!61 &1984416495494997609
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503941104687217118}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.84994507, y: 23.697624}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.45, y: 0.11}
+    oldSize: {x: 57.4, y: 117.7}
+    newSize: {x: 57.4, y: 117.7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 28.85254, y: 73.289246}
+  m_EdgeRadius: 0
