@@ -6601,7 +6601,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c5a77fdf62809f246bc0c8f8f5898f30, type: 2}
+  - {fileID: 2100000, guid: 3c3f2f6da60969449bd5f38bd9884213, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22774,11 +22774,11 @@ GameObject:
   - component: {fileID: 1406403042}
   m_Layer: 0
   m_Name: slime1_0
-  m_TagString: Untagged
+  m_TagString: inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &1406403037
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -22813,8 +22813,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 56.57233
+  m_Offset: {x: 0.7775955, y: -4.6655846}
+  m_Radius: 18.346859
 --- !u!114 &1406403038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22828,7 +22828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 40
-  player: {fileID: 121477107}
+  player: {fileID: 528545424}
 --- !u!212 &1406403039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22893,7 +22893,7 @@ Transform:
   m_GameObject: {fileID: 1406403036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -652, y: -462, z: 0}
+  m_LocalPosition: {x: -637, y: -664, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22907,7 +22907,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406403036}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

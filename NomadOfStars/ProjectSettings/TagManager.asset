@@ -8,6 +8,7 @@ TagManager:
   - dropP
   - Breakable
   - Tower
+  - inimigo
   - Base
   layers:
   - Default

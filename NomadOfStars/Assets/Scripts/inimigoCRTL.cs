@@ -15,7 +15,7 @@ public class SlimeFollowPlayer : MonoBehaviour
         // Certificar-se de que o player está atribuído (caso contrário, procura o player com a tag "Player")
         if (player == null)
         {
-            player = GameObject.FindWithTag("Player").transform;
+            player = GameObject.FindWithTag("Base").transform;
         }
     }
 
