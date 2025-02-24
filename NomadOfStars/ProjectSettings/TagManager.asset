@@ -8,6 +8,8 @@ TagManager:
   - pedra
   - dropM
   - dropP
+  - inimigo
+  - Base
   layers:
   - Default
   - TransparentFX

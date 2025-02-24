@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849343328111496597}
+  - component: {fileID: 8370507094450684132}
   m_Layer: 0
   m_Name: Mina
   m_TagString: Untagged
@@ -34,6 +35,21 @@ Transform:
   - {fileID: 5875199136549079239}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8370507094450684132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905545728655375387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a55da2f97827154cbdd419bbac738ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 5595276676034514471, guid: e475a9bddebed1145ab00f453e46f354, type: 3}
+  shootDelay: 3
+  shootOrigin: {fileID: 5875199136549079239}
 --- !u!1 &3774029855507850290
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 3587502406819363535, guid: f9c541507d273044189076c918d8feb6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_FlipX: 0
@@ -146,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 5732400866468633749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31, y: 34, z: -18.374514}
+  m_LocalPosition: {x: 28.2, y: 20.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6389782900888880194}
   - component: {fileID: 1100248238372464030}
+  - component: {fileID: 3501231639917872599}
   m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
@@ -231,6 +248,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 192, y: 192}
   m_EdgeRadius: 0
+--- !u!114 &3501231639917872599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7475683316701421137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4928f2c1335d734a806ec204b5cb32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerShooter: {fileID: 8370507094450684132}
 --- !u!1 &9217610021967059064
 GameObject:
   m_ObjectHideFlags: 0
