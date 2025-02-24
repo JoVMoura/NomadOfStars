@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5777865457192579610}
   m_Layer: 0
   m_Name: arvore1_0
-  m_TagString: arvore
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_Offset: {x: -0.29129028, y: -0.43697357}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.07}
+    pivot: {x: 0.5, y: 0.09}
     oldSize: {x: 46.8, y: 118.7}
     newSize: {x: 46.8, y: 118.7}
     adaptiveTilingThreshold: 0.5
@@ -172,7 +172,7 @@ BoxCollider2D:
   m_Offset: {x: -0.45755005, y: 19.997456}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.07}
+    pivot: {x: 0.5, y: 0.09}
     oldSize: {x: 46.8, y: 118.7}
     newSize: {x: 46.8, y: 118.7}
     adaptiveTilingThreshold: 0.5

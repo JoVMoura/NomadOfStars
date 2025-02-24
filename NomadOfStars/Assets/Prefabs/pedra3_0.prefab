@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7701040367340861229}
   m_Layer: 0
   m_Name: pedra3_0
-  m_TagString: pedra
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
