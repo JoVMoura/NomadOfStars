@@ -4,6 +4,7 @@ public class DirectionItem : MonoBehaviour
 {
     [SerializeField]private Camera cam;
     [SerializeField]private float range;
+    [SerializeField]private Animator item_Animator;
     private Vector2 ajuste;
     private float mouseAngle;
     private bool left;
@@ -25,11 +26,13 @@ public class DirectionItem : MonoBehaviour
             if(left && (Mathf.Abs(mouseAngle)<90))
             {
                 this.transform.localPosition = this.transform.localPosition * (-1f);
+                item_Animator.SetBool("Left", false);
                 left = false;
             }
             else if(!left && (Mathf.Abs(mouseAngle)>90))
             {
                 this.transform.localPosition = this.transform.localPosition * (-1f);
+                item_Animator.SetBool("Left", true);
                 left = true;
             }
             this.transform.localRotation = Quaternion.Euler(0, 0, mouseAngle);
