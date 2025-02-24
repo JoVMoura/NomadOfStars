@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - arvore
-  - pedra
   - dropM
   - dropP
+  - Breakable
+  - Tower
+  - Base
   layers:
   - Default
   - TransparentFX
