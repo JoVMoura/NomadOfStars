@@ -197,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drop: {fileID: 3980177712535858149, guid: 80281f05e4c4649499695d21dbf7f76e, type: 3}
   canvas: {fileID: 6283444376552534005}
-  healthBar: {fileID: 6624485004071444672}
+  healthBar: {fileID: 4073288242381660003}
   damageType: 1
   maxHealth: 100
   actualHealth: 0

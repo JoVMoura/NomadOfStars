@@ -8,6 +8,7 @@ public class EnemyVisionControl : MonoBehaviour
     {
         if(collision.gameObject.tag == "Tower")
         {
+            Debug.Log("Entrou");
             enemyControl.AddTarget(collision.gameObject);
         }
     }
