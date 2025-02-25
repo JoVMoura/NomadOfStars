@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 5595276676034514471, guid: e475a9bddebed1145ab00f453e46f354, type: 3}
-  shootDelay: 6
+  shootDelay: 10
   shootOrigin: {fileID: 5875199136549079239}
   canvas: {fileID: 9128379743231899405}
   healthBar: {fileID: 8127527831201613932}

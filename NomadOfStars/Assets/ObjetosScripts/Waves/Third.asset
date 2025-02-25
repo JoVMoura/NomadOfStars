@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Third
   m_EditorClassIdentifier: 
   waveDensity: 5
-  waveTime: 3
+  waveTime: 15
   waveData:
   - <Enemy>k__BackingField: {fileID: 3399631520865606968, guid: bcfc895b46cd92d48b48c7920bb3b272, type: 3}
     <Amount>k__BackingField: 27

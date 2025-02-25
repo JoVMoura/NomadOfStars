@@ -68,7 +68,6 @@ public class PlaceTower : MonoBehaviour
         {
             mousePosition = GetSelectedMapPosition();
             Vector3Int gridPosition = grid.WorldToCell(mousePosition) * 64;
-            Debug.Log(gridPosition);
             if(lastDetectedPosition != gridPosition)
             {
                 actualTower.transform.position = gridPosition;
