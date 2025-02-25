@@ -68,7 +68,10 @@ public class EnemyControl : MonoBehaviour
             enemyAnimator.SetBool("WasAttacked", false);
             if(target.tag == "Tower")
             {
-                target.GetComponent<TowerShooter2D>().towerTakeDamage(damage);
+                if(target.GetComponentInParent<TowerShooter2D>().towerTakeDamage(damage))
+                {
+                    move = true;
+                }
             }
             else if(target.tag == "Base")
             {

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 120
-  damage: 40
+  damage: 80
   duration: 0
   angleMatter: 1
 --- !u!61 &276311344620939592

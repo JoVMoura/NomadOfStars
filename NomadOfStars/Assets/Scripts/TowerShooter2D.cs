@@ -57,7 +57,7 @@ public class TowerShooter2D : MonoBehaviour
         shooting = false;
     }
 
-    public void towerTakeDamage(float _damage)
+    public bool towerTakeDamage(float _damage)
     {
         actualHealth -= _damage;
         
@@ -68,10 +68,13 @@ public class TowerShooter2D : MonoBehaviour
                 canvas.SetActive(true);
             }
             healthBar.value = actualHealth/(porcent*100);
+
+            return false;
         }
         else
         {
             Destroy(this.gameObject);
+            return true;
         }
     }
 

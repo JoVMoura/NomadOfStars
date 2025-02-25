@@ -8,6 +8,7 @@ public class WaveControl : MonoBehaviour
     [SerializeField]private Transform[] spwans;
     [SerializeField]private Wave[] waves;
     private int numWave;
+    private bool inWave;
 
     void Start()
     {
@@ -16,10 +17,13 @@ public class WaveControl : MonoBehaviour
 
     public void WaveStart()
     {
-        if(numWave < 3)
+        if(!inWave)
         {
-            numWave++;
-            StartCoroutine(Wave());
+            if(numWave < 3)
+            {
+                numWave++;
+                StartCoroutine(Wave());
+            }
         }
     }
 
@@ -31,6 +35,8 @@ public class WaveControl : MonoBehaviour
         int i = 0, j = 0, k = 0;
         bool saida = false;
     
+        inWave = true;
+
         for(i = 0; i < waves[numWave].waveData.Count; i++)
         {
             posSpwans.Add(i);
@@ -81,5 +87,8 @@ public class WaveControl : MonoBehaviour
         {
             //Vitoria
         }
+        
+        inWave = false;
     }
+
 }

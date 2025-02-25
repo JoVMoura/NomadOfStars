@@ -42,8 +42,7 @@ public class BulletControl : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("inimigo");
-            collision.gameObject.GetComponent<EnemyControl>().enemyTakeDamage(damage);
+            collision.gameObject.GetComponentInParent<EnemyControl>().enemyTakeDamage(damage);
             if(duration <= 0)
             {
                 Destroy(this.gameObject);
