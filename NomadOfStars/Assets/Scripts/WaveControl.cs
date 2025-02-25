@@ -5,8 +5,9 @@ using System.Collections.Generic;
 public class WaveControl : MonoBehaviour
 {
     [SerializeField] private TimerControl timerControl;
-    [SerializeField]private Transform[] spwans;
-    [SerializeField]private Wave[] waves;
+    [SerializeField] private UI_control uiControl;
+    [SerializeField] private Transform[] spwans;
+    [SerializeField] private Wave[] waves;
     private int numWave;
 
     void Start()
@@ -71,7 +72,7 @@ public class WaveControl : MonoBehaviour
                 yield return new WaitForSeconds(waves[numWave].waveTime);
             }
 
-        }while(!saida);
+        } while(!saida);
 
         if(numWave < 2)
         {
@@ -79,7 +80,7 @@ public class WaveControl : MonoBehaviour
         }
         else
         {
-            //Vitoria
+            uiControl.AbrirVitoria(); // Chama a tela de vitória do UI_control
         }
     }
 }
