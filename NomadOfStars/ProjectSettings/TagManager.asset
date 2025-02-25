@@ -8,8 +8,8 @@ TagManager:
   - dropP
   - Breakable
   - Tower
-  - inimigo
   - Base
+  - Enemy
   layers:
   - Default
   - TransparentFX

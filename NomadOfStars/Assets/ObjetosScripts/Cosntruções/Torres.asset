@@ -17,7 +17,7 @@ MonoBehaviour:
     <ID>k__BackingField: 0
     <WoodPrice>k__BackingField: 2
     <StonePrice>k__BackingField: 2
-    <Damage>k__BackingField: 100
+    <Damage>k__BackingField: 40
     <AtkDelay>k__BackingField: 1
     <Struct>k__BackingField: {fileID: 3765881377525554853, guid: 15d8ff90854413344855a8e2013efd03, type: 3}
     <Munition>k__BackingField: {fileID: 0}

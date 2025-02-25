@@ -8,7 +8,7 @@ public class Breakable : MonoBehaviour
     [SerializeField] private Slider healthBar;
     [SerializeField] private int damageType; // 0 para inquebravel, 1 para machado, 2 para picareta
     [SerializeField] private float maxHealth;
-    [SerializeField] private float actualHealth;
+    private float actualHealth;
     private float porcent; 
 
     void Start()

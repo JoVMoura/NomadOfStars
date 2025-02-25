@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyControl : MonoBehaviour
 {
     //Atributos do inimigo
-    [SerializeField]private float healh;
+    [SerializeField]private float maxHealth;
     [SerializeField]private float damage;
     [SerializeField]private float movementSpeed;
-    [SerializeField]private float attackSpeed;
     [SerializeField]private bool towerFocus; //Se false o inimgo só irá focar na base e irá ignorar o resto das torres
-    
+
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private Slider healthBar;
+    [SerializeField] private Animator enemyAnimator;
+
+    private float actualHealth;
+    private float porcent;
+
     private Rigidbody2D enemyRigidbody;
     private GameObject target;
     private bool move;
@@ -19,12 +26,12 @@ public class EnemyControl : MonoBehaviour
 
     void Start()
     {
+        actualHealth = maxHealth;
+        porcent = maxHealth/100;
+
         enemyRigidbody = GetComponent<Rigidbody2D>();
-
         target = GameObject.FindWithTag("Base");
-
         move = true;
-
         queueSize = -1;
     }
 
@@ -47,7 +54,26 @@ public class EnemyControl : MonoBehaviour
 
         if(!move)
         {
-            //Executar Ataque
+            enemyAnimator.SetBool("Move", false);
+            enemyAnimator.SetBool("Attack", true);
+        }
+        else if(!enemyAnimator.GetBool("Move") || enemyAnimator.GetBool("Attack"))
+        {
+            enemyAnimator.SetBool("Move", true);
+            enemyAnimator.SetBool("Attack", false);
+        }
+
+        if(enemyAnimator.GetBool("WasAttacked"))
+        {
+            enemyAnimator.SetBool("WasAttacked", false);
+            if(target.tag == "Tower")
+            {
+                target.GetComponent<TowerShooter2D>().towerTakeDamage(damage);
+            }
+            else if(target.tag == "Base")
+            {
+                target.GetComponent<BaseControl>().BaseTakeDamage(damage);
+            }
         }
     }
 
@@ -84,6 +110,24 @@ public class EnemyControl : MonoBehaviour
         if(newAtackTarget == target)
         {
             move = false;
+        }
+    }
+
+    public void enemyTakeDamage(float _damage)
+    {
+        actualHealth -= _damage;
+        
+        if(actualHealth > 0)
+        {
+            if(!canvas.activeSelf)
+            {
+                canvas.SetActive(true);
+            }
+            healthBar.value = actualHealth/(porcent*100);
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 }
