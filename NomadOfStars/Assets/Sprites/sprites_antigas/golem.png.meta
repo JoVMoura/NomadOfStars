@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b7cb7f00353083840afd3de2d94db688
+guid: d519aa9a63d8cad49ad0c0b2ecd57aba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3500192625291955832
-    second: WhatsApp Image 2025-06-29 at 02.06.39-Photoroom (1)_0
+      213: 8821016199925446121
+    second: golem_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WhatsApp Image 2025-06-29 at 02.06.39-Photoroom (1)_0
+      name: golem_0
       rect:
         serializedVersion: 2
-        x: 134
-        y: 86
-        width: 1012
-        height: 1108
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 201
+        y: 315
+        width: 883
+        height: 806
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87e08fbd5ae239030800000000000000
-      internalID: 3500192625291955832
+      spriteID: 9e5b5828f7b8a6a70800000000000000
+      internalID: 8821016199925446121
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0e7e95eb2dceec24296e3f936457aaf1
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WhatsApp Image 2025-06-29 at 02.06.39-Photoroom (1)_0: 3500192625291955832
+      golem_0: 8821016199925446121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

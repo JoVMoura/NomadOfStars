@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8216460823802984551}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -769686325
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1342194801300183400, guid: df380476ae0184c48a0974cf0927ee99, type: 3}
+  m_Sprite: {fileID: -1014755810869987563, guid: 996ddad0b0808a14099f47ad0b8925e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,17 +125,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.25}
+  m_Offset: {x: 0, y: -40.92727}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.07919491}
-    oldSize: {x: 60.8, y: 107.1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 62.5, y: 91.4}
     newSize: {x: 60.8, y: 107.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 11.031996, y: 14.444376}
+  m_Size: {x: 11.031996, y: 9.466419}
   m_EdgeRadius: 0
 --- !u!61 &-320203408201340709
 BoxCollider2D:
@@ -171,17 +171,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 25.8}
+  m_Offset: {x: 0.47520542, y: -41.31686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.07919491}
-    oldSize: {x: 60.8, y: 107.1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 62.5, y: 91.4}
     newSize: {x: 60.8, y: 107.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 26.790842, y: 68.592026}
+  m_Size: {x: 11.109055, y: 10.491814}
   m_EdgeRadius: 0
 --- !u!114 &4390753744185268542
 MonoBehaviour:
@@ -200,7 +200,6 @@ MonoBehaviour:
   healthBar: {fileID: 4073288242381660003}
   damageType: 1
   maxHealth: 100
-  actualHealth: 0
 --- !u!1 &1618915831978015473
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -12.5}
+  m_AnchoredPosition: {x: 0, y: -50.6}
   m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4073288242381660003
