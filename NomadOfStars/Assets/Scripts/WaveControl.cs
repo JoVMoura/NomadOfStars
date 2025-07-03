@@ -5,8 +5,10 @@ using System.Collections.Generic;
 public class WaveControl : MonoBehaviour
 {
     [SerializeField] private TimerControl timerControl;
-    [SerializeField]private Transform[] spwans;
-    [SerializeField]private Wave[] waves;
+    [SerializeField] private Transform[] spwans;
+    [SerializeField] private Wave[] waves;
+    [SerializeField] private UI_control uiControl; // Referência ao script UI_control
+
     private int numWave;
     private bool inWave;
 
@@ -49,10 +51,10 @@ public class WaveControl : MonoBehaviour
 
             for(i = actualDensity; i > 0; i--)
             {
-                j = Random.Range(0,posSpwans.Count);
+                j = Random.Range(0, posSpwans.Count);
                 if(amount[posSpwans[j]] > 0)
                 {
-                    k = Random.Range(0,spwans.Length);
+                    k = Random.Range(0, spwans.Length);
                     Instantiate(waves[numWave].waveData[posSpwans[j]].Enemy, spwans[k].position, Quaternion.identity);
                     amount[posSpwans[j]]--;
                 }
@@ -77,7 +79,7 @@ public class WaveControl : MonoBehaviour
                 yield return new WaitForSeconds(waves[numWave].waveTime);
             }
 
-        }while(!saida);
+        } while(!saida);
 
         if(numWave < 2)
         {
@@ -85,10 +87,10 @@ public class WaveControl : MonoBehaviour
         }
         else
         {
-            //Vitoria
+            // Vitória: Abre o menu de vitória
+            uiControl.AbrirVitoria();
         }
         
         inWave = false;
     }
-
 }

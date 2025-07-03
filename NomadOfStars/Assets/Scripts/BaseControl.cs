@@ -7,18 +7,19 @@ public class BaseControl : MonoBehaviour
     [SerializeField] private WaveControl waveControl;
 
     [SerializeField] private GameObject canvasInfo;
-
+    [SerializeField] private UI_control uiControl;
     [SerializeField] private GameObject canvasHB;
     [SerializeField] private Slider healthBar;
 
-    [SerializeField]private float maxHealth;
+    [SerializeField] private float maxHealth;
     private float actualHealth;
     private float porcent;
+
 
     void Start()
     {
         actualHealth = maxHealth;
-        porcent = maxHealth/100;
+        porcent = maxHealth / 100;
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -47,12 +48,13 @@ public class BaseControl : MonoBehaviour
             {
                 canvasHB.SetActive(true);
             }
-            healthBar.value = actualHealth/(porcent*100);
+            healthBar.value = actualHealth / (porcent * 100);
         }
         else
         {
             Destroy(this.gameObject);
-            //Derrota
+            // Derrota: Abre o menu de derrota
+            uiControl.AbrirDerrota();
         }
     }
 }
