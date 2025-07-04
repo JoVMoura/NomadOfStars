@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -320203408201340709}
   - component: {fileID: 4390753744185268542}
   m_Layer: 0
-  m_Name: arvore2
+  m_Name: arvore2 1
   m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: -769686325
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1540927490821267395, guid: 767aebbd679191943ae3b674c93734b3, type: 3}
+  m_Sprite: {fileID: -235892290212577164, guid: f44217f0c0894c94e9ea49610d32b686, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 60.8, y: 107.1}
+  m_Size: {x: 67.7, y: 106.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -125,17 +125,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.9426067, y: -39.268463}
+  m_Offset: {x: -0.9426069, y: -47.01626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 59.3, y: 94.8}
-    newSize: {x: 60.8, y: 107.1}
+    oldSize: {x: 67.7, y: 106.7}
+    newSize: {x: 67.7, y: 106.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 12.91721, y: 16.32959}
+  m_Size: {x: 12.91721, y: 12.753689}
   m_EdgeRadius: 0
 --- !u!61 &-320203408201340709
 BoxCollider2D:
@@ -171,17 +171,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.2568102, y: -22.091904}
+  m_Offset: {x: -1.2568102, y: -25.965803}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 59.3, y: 94.8}
-    newSize: {x: 60.8, y: 107.1}
+    oldSize: {x: 67.7, y: 106.7}
+    newSize: {x: 67.7, y: 106.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 14.222754, y: 52.519836}
+  m_Size: {x: 14.222754, y: 54.30779}
   m_EdgeRadius: 0
 --- !u!114 &4390753744185268542
 MonoBehaviour:
@@ -483,7 +483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.9, y: -53.7}
+  m_AnchoredPosition: {x: 0, y: -60.3}
   m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4073288242381660003
