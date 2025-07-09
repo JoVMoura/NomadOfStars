@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d48214d5058bd24d9e765564e0c351e, type: 3}
+  m_Name: Mundo_1
+  m_EditorClassIdentifier: 
+  size: 31
+  setpieces:
+  - <piece>k__BackingField: {fileID: 11400000, guid: f69ae9fedf1353b47b5b9771b5fc9589, type: 2}
+    <essential>k__BackingField: 0
+    <rarity>k__BackingField: 1
+    <AmountRange>k__BackingField: 0
+    <minAmount>k__BackingField: 0
+    <maxAmount>k__BackingField: 0
+    <localRange>k__BackingField: []
+  - <piece>k__BackingField: {fileID: 11400000, guid: ab0294c3c5a5a434a8b08aab7d4a7695, type: 2}
+    <essential>k__BackingField: 1
+    <rarity>k__BackingField: 0
+    <AmountRange>k__BackingField: 1
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 1
+    <localRange>k__BackingField:
+    - <minX>k__BackingField: 14
+      <maxX>k__BackingField: 18
+      <minY>k__BackingField: 14
+      <maxY>k__BackingField: 18
