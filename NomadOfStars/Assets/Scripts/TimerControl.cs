@@ -7,17 +7,16 @@ public class TimerControl : MonoBehaviour
     [SerializeField] private float timeTotal;
     private int currentPlanet;
     private float[] TimeLeft = new float[3];
-    //private float[] TimeOrder = new float[3]; 
-    private bool[] TimerOn = {false, false, false};
+    private bool[] TimerOn = { false, false, false };
     [SerializeField] private TMP_Text[] txtTimer = new TMP_Text[3];
-   
+
     void Start()
     {
         currentPlanet = 0;
 
         TimeLeft[0] = timeTotal;
-        TimeLeft[1] = timeTotal+60;
-        TimeLeft[2] = timeTotal+120;
+        TimeLeft[1] = timeTotal + 6;
+        TimeLeft[2] = timeTotal + 12;
         TimerOn[0] = true;
         TimerOn[1] = true;
         TimerOn[2] = true;
@@ -25,9 +24,9 @@ public class TimerControl : MonoBehaviour
 
     void Update()
     {
-        if(TimerOn[0])
+        if (TimerOn[0])
         {
-            if(TimeLeft[0] > 0)
+            if (TimeLeft[0] > 0)
             {
                 TimeLeft[0] -= Time.deltaTime;
                 updateTimer(TimeLeft[0], 0);
@@ -36,7 +35,8 @@ public class TimerControl : MonoBehaviour
             {
                 TimeLeft[0] = 0;
                 TimerOn[0] = false;
-                waveControl.WaveStart();
+                // CORREÇÃO: Passando o índice do planeta 0
+                waveControl.WaveStart(0);
             }
         }
         if (TimerOn[1])
@@ -50,7 +50,8 @@ public class TimerControl : MonoBehaviour
             {
                 TimeLeft[1] = 0;
                 TimerOn[1] = false;
-                waveControl.WaveStart();
+                // CORREÇÃO: Passando o índice do planeta 1
+                waveControl.WaveStart(1);
             }
         }
         if (TimerOn[2])
@@ -64,8 +65,19 @@ public class TimerControl : MonoBehaviour
             {
                 TimeLeft[2] = 0;
                 TimerOn[2] = false;
-                waveControl.WaveStart();
+                // CORREÇÃO: Passando o índice do planeta 2
+                waveControl.WaveStart(2);
             }
+        }
+    }
+
+    // Método para ser chamado pelo botão do jogador
+    public void StartWaveManually()
+    {
+        if (TimerOn[currentPlanet])
+        {
+            // Apenas zera o tempo. A lógica no Update fará a chamada correta.
+            TimeLeft[currentPlanet] = 0;
         }
     }
 
@@ -77,18 +89,19 @@ public class TimerControl : MonoBehaviour
         }
         else
         {
-            TimeLeft[timer] = timeTotal + TimeLeft[timer+1];
+            TimeLeft[timer] = timeTotal + TimeLeft[timer + 1];
         }
 
         TimerOn[timer] = true;
         updateTimer(TimeLeft[timer], timer);
     }
 
-    public void ClearTimer()
+    public void SetCurrentPlanet(int planetIndex)
     {
-        TimeLeft[currentPlanet] = 0;
-        TimerOn[currentPlanet] = false;
-        updateTimer(TimeLeft[currentPlanet], currentPlanet);
+        if (planetIndex >= 0 && planetIndex < 3)
+        {
+            currentPlanet = planetIndex;
+        }
     }
 
     void updateTimer(float currentTime, int actualTimer)

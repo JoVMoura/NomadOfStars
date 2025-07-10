@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213f20d3555573041961863bc12963a7, type: 3}
+  m_Name: PoucaPedra_M3
+  m_EditorClassIdentifier: 
+  setPieceName: Pouca
+  localRange: []
+  preSetTile: 0
+  tiles:
+  - {fileID: 11400000, guid: b857d86e481cda742b566905c25f6784, type: 2}
+  structure:
+  - <prefab>k__BackingField: {fileID: 1059314014271016972, guid: 41e9a82f8bb6a91468aedf1bc65ed460, type: 3}
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 2
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0
+  - <prefab>k__BackingField: {fileID: 549259644692408456, guid: 97d819799f6eb884dab098fda3403644, type: 3}
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 2
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0

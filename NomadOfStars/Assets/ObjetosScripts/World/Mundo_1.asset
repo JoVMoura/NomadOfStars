@@ -28,7 +28,37 @@ MonoBehaviour:
     <maxAmount>k__BackingField: 1
   - <piece>k__BackingField: {fileID: 11400000, guid: 62283f18f090487459ddaa56f4f36794, type: 2}
     <essential>k__BackingField: 0
+    <rarity>k__BackingField: 1
+    <AmountRange>k__BackingField: 0
+    <minAmount>k__BackingField: 0
+    <maxAmount>k__BackingField: 0
+  - <piece>k__BackingField: {fileID: 11400000, guid: 7fd9ca682686ff94eb6a270c69910098, type: 2}
+    <essential>k__BackingField: 0
+    <rarity>k__BackingField: 1
+    <AmountRange>k__BackingField: 0
+    <minAmount>k__BackingField: 0
+    <maxAmount>k__BackingField: 0
+  - <piece>k__BackingField: {fileID: 11400000, guid: 206c4457cd43f224ab58aec630cd8317, type: 2}
+    <essential>k__BackingField: 0
+    <rarity>k__BackingField: 1
+    <AmountRange>k__BackingField: 0
+    <minAmount>k__BackingField: 0
+    <maxAmount>k__BackingField: 0
+  - <piece>k__BackingField: {fileID: 11400000, guid: 0b33af7bfbd96274d88bf862b838e51b, type: 2}
+    <essential>k__BackingField: 0
+    <rarity>k__BackingField: 2
+    <AmountRange>k__BackingField: 0
+    <minAmount>k__BackingField: 0
+    <maxAmount>k__BackingField: 0
+  - <piece>k__BackingField: {fileID: 11400000, guid: 4fd3dbd7cdae4c3489831032b1691bd7, type: 2}
+    <essential>k__BackingField: 0
     <rarity>k__BackingField: 3
     <AmountRange>k__BackingField: 0
     <minAmount>k__BackingField: 0
     <maxAmount>k__BackingField: 0
+  - <piece>k__BackingField: {fileID: 11400000, guid: bf92087d6d66f8a4bac5fa4841405d8b, type: 2}
+    <essential>k__BackingField: 1
+    <rarity>k__BackingField: 3
+    <AmountRange>k__BackingField: 1
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 1
