@@ -8,6 +8,7 @@ public class WorldCreate : MonoBehaviour
     [SerializeField] private List<World> worlds;
     [SerializeField] private GameObject grid;
     [SerializeField] private GameObject tilemap;
+    [SerializeField] private GameControl gameControl;
 
     void Start()
     {
@@ -176,7 +177,14 @@ public class WorldCreate : MonoBehaviour
                 {
                     if(map[i, j].structure[k].center)
                     {
-                        Instantiate(map[i, j].structure[k].prefab, new Vector3(128+(i*254),128+(j*254),0), Quaternion.identity);
+                        if (map[i, j].structure[k].prefab.name == "Base")
+                        {
+                            gameControl.SetSpawn(Instantiate(map[i, j].structure[k].prefab, new Vector3(128 + (i * 254), 128 + (j * 254), 0), Quaternion.identity).transform);
+                        }
+                        else
+                        {
+                            Instantiate(map[i, j].structure[k].prefab, new Vector3(128 + (i * 254), 128 + (j * 254), 0), Quaternion.identity);
+                        }
                     }
                     else
                     {

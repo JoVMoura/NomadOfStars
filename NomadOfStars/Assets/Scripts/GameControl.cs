@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -5,14 +6,18 @@ using UnityEngine.InputSystem;
 public class GameControl : MonoBehaviour
 {
     private bool inBase;
+    private List<Transform> SpawnPlanet;
     [SerializeField] private GameObject mouseObject;
     [SerializeField] TempoMenuConfig tempoMenuConfig;
     [SerializeField] private UI_control ui_control;
+    [SerializeField] private TimerControl timerControl;
+    [SerializeField] private WaveControl waveControl;
     private InputAction BaseAction;
 
     void Start()
     {
-        BaseAction = InputSystem.actions.FindAction("Base");   
+        SpawnPlanet = new List<Transform>();
+        BaseAction = InputSystem.actions.FindAction("Base");
     }
     void Update()
     {
@@ -47,5 +52,26 @@ public class GameControl : MonoBehaviour
     {
         inBase = state;
         tempoMenuConfig.SetOpen(state);
+    }
+
+    public void SetSpawn(Transform transform)
+    {
+        SpawnPlanet.Add(transform);
+        if (SpawnPlanet.Count == 1)
+        {
+            //Setar jogador
+            //Setar camera follow
+        }
+    }
+
+    public Transform GetSpawn(int planet)
+    {
+        return SpawnPlanet[planet];
+    }
+
+    public void TrasportarPlayer(int planet)
+    {
+        //Setar currentplanet
+        //Setar player para planeta
     }
 }
