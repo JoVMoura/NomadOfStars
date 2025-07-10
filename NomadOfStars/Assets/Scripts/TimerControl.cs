@@ -5,56 +5,97 @@ public class TimerControl : MonoBehaviour
 {
     [SerializeField] private WaveControl waveControl;
     [SerializeField] private float timeTotal;
-    private float TimeLeft;
-    private bool TimerOn = false;
-
-    [SerializeField] private TMP_Text txtTimer;
+    private int currentPlanet;
+    private float[] TimeLeft = new float[3];
+    //private float[] TimeOrder = new float[3]; 
+    private bool[] TimerOn = {false, false, false};
+    [SerializeField] private TMP_Text[] txtTimer = new TMP_Text[3];
    
     void Start()
     {
-        TimeLeft = timeTotal;
-        TimerOn = true;
+        TimeLeft[0] = timeTotal;
+        TimeLeft[1] = timeTotal+1;
+        TimeLeft[2] = timeTotal+1;
+        TimerOn[0] = true;
+        TimerOn[1] = true;
+        TimerOn[2] = true;
     }
 
     void Update()
     {
-        if(TimerOn)
+        if(TimerOn[0])
         {
-            if(TimeLeft > 0)
+            if(TimeLeft[0] > 0)
             {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
+                TimeLeft[0] -= Time.deltaTime;
+                updateTimer(TimeLeft[0], 0);
             }
             else
             {
-                TimeLeft = 0;
-                TimerOn = false;
+                TimeLeft[0] = 0;
+                TimerOn[0] = false;
+                waveControl.WaveStart();
+            }
+        }
+        if (TimerOn[0])
+        {
+            if (TimeLeft[0] > 0)
+            {
+                TimeLeft[0] -= Time.deltaTime;
+                updateTimer(TimeLeft[0], 0);
+            }
+            else
+            {
+                TimeLeft[0] = 0;
+                TimerOn[0] = false;
+                waveControl.WaveStart();
+            }
+        }
+        if (TimerOn[0])
+        {
+            if (TimeLeft[0] > 0)
+            {
+                TimeLeft[0] -= Time.deltaTime;
+                updateTimer(TimeLeft[0], 0);
+            }
+            else
+            {
+                TimeLeft[0] = 0;
+                TimerOn[0] = false;
                 waveControl.WaveStart();
             }
         }
     }
 
-    public void ResetTimer()
+    public void ResetTimer(int timer)
     {
-        TimeLeft = timeTotal;
-        TimerOn = true;
-        updateTimer(TimeLeft);
+        if (timer == 2)
+        {
+            TimeLeft[timer] = timeTotal + TimeLeft[1];
+        }
+        else
+        {
+            TimeLeft[timer] = timeTotal + TimeLeft[timer+1];
+        }
+
+        TimerOn[timer] = true;
+        updateTimer(TimeLeft[timer], timer);
     }
 
-    public void ClearTimer()
+    public void ClearTimer(int timer)
     {
-        TimeLeft = 0;
-        TimerOn = false;
-        updateTimer(TimeLeft);
+        TimeLeft[timer] = 0;
+        TimerOn[timer] = false;
+        updateTimer(TimeLeft[timer], timer);
     }
 
-    void updateTimer(float currentTime)
+    void updateTimer(float currentTime, int actualTimer)
     {
         currentTime += 1;
 
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        txtTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        txtTimer[actualTimer].text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

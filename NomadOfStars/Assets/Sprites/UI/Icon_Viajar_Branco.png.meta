@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 77e6a1b52a984104d917a04267f94ff2
+guid: cef3e7a55812ba342bfaaaf777fd06fa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7952710813121945684
-    second: grama1_0
+      213: -464600610084159755
+    second: Icon_Viajar_Branco_0
+  - first:
+      213: -4333528879713157330
+    second: Icon_Viajar_Branco_1
+  - first:
+      213: -2608170400676145511
+    second: Icon_Viajar_Branco_2
+  - first:
+      213: 6004927968584527289
+    second: Icon_Viajar_Branco_3
+  - first:
+      213: -5212210952333824765
+    second: Icon_Viajar_Branco_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -98,7 +110,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -111,7 +123,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: WebGL
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -124,7 +136,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,23 +151,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grama1_0
+      name: Icon_Viajar_Branco_2
       rect:
         serializedVersion: 2
-        x: 218
-        y: 184
-        width: 169
-        height: 176
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caf557696ab42a190800000000000000
-      internalID: -7952710813121945684
+      spriteID: 996920ad6daedcbd0800000000000000
+      internalID: -2608170400676145511
       vertices: []
       indices: 
       edges: []
@@ -164,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f1efea5fc46d48a4db3fc619dcb403c4
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +186,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      grama1_0: -7952710813121945684
+      Icon_Viajar_Branco_2: -2608170400676145511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
