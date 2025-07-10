@@ -24,6 +24,10 @@ public class DropItem : MonoBehaviour
                 {
                     inventory.drop_pedra_count();
                 }
+                else if (tipo == 3)
+                {
+                    GameObject.Find("Brain").GetComponent<GameControl>().PegarCristal();
+                }
             }
 
             // Toca o som de pegar o item no ponto onde o objeto está

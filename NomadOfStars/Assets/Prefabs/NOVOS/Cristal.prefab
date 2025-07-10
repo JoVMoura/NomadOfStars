@@ -195,11 +195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f7945bdc46fbe40a26a423bc095130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drop: {fileID: 6309074990068311688, guid: 37ba7ecb3a1b95e4197fd9016fdd8fa5, type: 3}
+  drop: {fileID: 3980177712535858149, guid: 47a6cc78ae8b3d14ba5079eb70b967b2, type: 3}
   canvas: {fileID: 1050022696465887027}
   healthBar: {fileID: 4234597092182623403}
   damageType: 2
-  maxHealth: 100
+  maxHealth: 200
 --- !u!1 &1050022696465887027
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ RectTransform:
   m_Father: {fileID: 2909703102363130357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.22048187, y: 0}
   m_SizeDelta: {x: -0.44099998, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -403,7 +403,7 @@ RectTransform:
   m_GameObject: {fileID: 4039672137092370107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2909703102363130357}
@@ -412,7 +412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -15.1}
+  m_AnchoredPosition: {x: 5.3, y: -25.7}
   m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4234597092182623403

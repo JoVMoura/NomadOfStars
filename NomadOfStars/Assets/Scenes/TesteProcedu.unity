@@ -214,6 +214,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1980500006}
+        m_TargetAssemblyTypeName: WorldCreate, Assembly-CSharp
+        m_MethodName: CreateMap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1980500006}
+        m_TargetAssemblyTypeName: WorldCreate, Assembly-CSharp
+        m_MethodName: CreateMap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &673515584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,8 +975,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worlds:
   - {fileID: 11400000, guid: 3ba68ffb3d8297d43a10afb505a2ff65, type: 2}
+  - {fileID: 11400000, guid: 7f7d3ddf7a8594e44851d295b3b7688c, type: 2}
+  - {fileID: 11400000, guid: a390ff8bd55dacf40a76cd426ab86d54, type: 2}
   grid: {fileID: 1908632065}
   tilemap: {fileID: 8312886056643907106, guid: 80fc560c9c1285e4d9592eb854775951, type: 3}
+  colidermap: {fileID: 1887229673638464313, guid: eae738c3b457ef94bb638aa28d560cb4, type: 3}
+  tileColider: {fileID: 11400000, guid: c4c46c74128c4744c87b99dbb2669568, type: 2}
+  gameControl: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 public class World : ScriptableObject
 {
     public int size;
+    public int offSet;
     public List<SetPieceData> setpieces;
 }
 

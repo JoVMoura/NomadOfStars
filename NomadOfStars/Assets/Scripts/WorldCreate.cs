@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -8,22 +9,29 @@ public class WorldCreate : MonoBehaviour
     [SerializeField] private List<World> worlds;
     [SerializeField] private GameObject grid;
     [SerializeField] private GameObject tilemap;
+    [SerializeField] private GameObject colidermap;
+    [SerializeField] private Tile tileColider;
+
     [SerializeField] private GameControl gameControl;
 
     void Start()
     {
-
+        CreateMap(0);
+        CreateMap(1);
+        CreateMap(2);
     }
 
     public void CreateMap(int nWorld)
     {
         int size = worlds[nWorld].size;
+        int offSet = worlds[nWorld].offSet;
         bool[,] vet;
         bool igual;
         int i = 0, j = 0, k = 0, w = 0, n = 0, x = 0, y = 0;
         SetPiece[,] map;
         GameObject mapaAtual;
         Tilemap tileMapAtual;
+        Tilemap tileMapcolider;
         List<Tile> tileRange;
         List<StructuresData> StructureRange;
         int somaTolal = 0;
@@ -43,8 +51,9 @@ public class WorldCreate : MonoBehaviour
         unique = new List<SetPiece>();
         generic = new List<SetPiece>();
 
-        mapaAtual = Instantiate(tilemap, grid.transform);
+        mapaAtual = Instantiate(tilemap,new Vector3(offSet*5376, 0, 0), Quaternion.identity, grid.transform);
         tileMapAtual = mapaAtual.GetComponent<Tilemap>();
+        tileMapcolider = Instantiate(colidermap, new Vector3(offSet*5376, 0, 0), Quaternion.identity, grid.transform).GetComponent<Tilemap>();
         tileRange = new List<Tile>();
         StructureRange = new List<StructuresData>();
 
@@ -123,10 +132,10 @@ public class WorldCreate : MonoBehaviour
                 do
                 {
                     j = Random.Range(0, essential[i].localRange.Count);
-                    x = Random.Range(essential[i].localRange[j].minX, essential[i].localRange[j].maxX+1) - 1;
-                    y = Random.Range(essential[i].localRange[j].minY, essential[i].localRange[j].maxY+1) - 1;
+                    x = Random.Range(essential[i].localRange[j].minX, essential[i].localRange[j].maxX + 1) - 1;
+                    y = Random.Range(essential[i].localRange[j].minY, essential[i].localRange[j].maxY + 1) - 1;
                     Debug.Log("X: " + x + "Y: " + y);
-                    Debug.Log("VetX: "+vet.GetLength(0)+"VetY: "+vet.GetLength(0));
+                    Debug.Log("VetX: " + vet.GetLength(0) + "VetY: " + vet.GetLength(0));
                 } while (vet[x, y] == true);
             }
 
@@ -166,30 +175,30 @@ public class WorldCreate : MonoBehaviour
                 j = 0;
             }
         } while (i < size);
-        
+
         i = 0;
         j = 0;
         do
         {
-            if(map[i, j].structure.Count != 0)
+            if (map[i, j].structure.Count != 0)
             {
                 for (k = 0; k < map[i, j].structure.Count; k++)
                 {
-                    if(map[i, j].structure[k].center)
+                    if (map[i, j].structure[k].center)
                     {
-                        if (map[i, j].structure[k].prefab.name == "Base")
+                        if (map[i, j].structure[k].prefab.name.Contains("Base"))
                         {
-                            gameControl.SetSpawn(Instantiate(map[i, j].structure[k].prefab, new Vector3(128 + (i * 254), 128 + (j * 254), 0), Quaternion.identity).transform);
+                            gameControl.SetSpawn(Instantiate(map[i, j].structure[k].prefab, new Vector3(128 + (i * 254) + (offSet*5376), 128 + (j * 254), 0), Quaternion.identity).transform.GetChild(2));
                         }
                         else
                         {
-                            Instantiate(map[i, j].structure[k].prefab, new Vector3(128 + (i * 254), 128 + (j * 254), 0), Quaternion.identity);
+                            Instantiate(map[i, j].structure[k].prefab, new Vector3(128 + (i * 254) + (offSet*5376), 128 + (j * 254), 0), Quaternion.identity);
                         }
                     }
                     else
                     {
-                        n = Random.Range(map[i, j].structure[k].minAmount,map[i, j].structure[k].maxAmount+1);
-                        for(w = 0; w < n; w++)
+                        n = Random.Range(map[i, j].structure[k].minAmount, map[i, j].structure[k].maxAmount + 1);
+                        for (w = 0; w < n; w++)
                         {
                             igual = false;
                             do
@@ -214,7 +223,7 @@ public class WorldCreate : MonoBehaviour
                                     }
                                 }*/
                             } while (igual);
-                            Instantiate(map[i, j].structure[k].prefab, new Vector3(x+(i*254),y+(j*254),0), Quaternion.identity);
+                            Instantiate(map[i, j].structure[k].prefab, new Vector3(x + (i * 254) + (offSet*5376), y + (j * 254), 0), Quaternion.identity);
                             localInvX.Add(x);
                             localInvY.Add(y);
                         }
@@ -231,6 +240,17 @@ public class WorldCreate : MonoBehaviour
                 j = 0;
             }
         } while (i < size);
-        
+
+        for (i = 0; i < size*4; i++)
+        {
+            tileMapcolider.SetTile(new Vector3Int(-1, i, 0), tileColider);
+            tileMapcolider.SetTile(new Vector3Int(i, -1, 0), tileColider);
+            tileMapcolider.SetTile(new Vector3Int(size*4, i, 0), tileColider);
+            tileMapcolider.SetTile(new Vector3Int(i, size*4, 0), tileColider);
+        }
+        tileMapcolider.SetTile(new Vector3Int(-1, size*4, 0), tileColider);
+        tileMapcolider.SetTile(new Vector3Int(size*4, -1, 0), tileColider);
+        tileMapcolider.SetTile(new Vector3Int(-1, -1, 0), tileColider);
+        tileMapcolider.SetTile(new Vector3Int(size*4, size*4, 0), tileColider);
     } 
 }

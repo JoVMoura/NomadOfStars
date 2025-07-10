@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mundo_2
   m_EditorClassIdentifier: 
   size: 11
+  offSet: 1
   setpieces:
   - <piece>k__BackingField: {fileID: 11400000, guid: d222214b8fe33e843ab6c5ae8d6f5435, type: 2}
     <essential>k__BackingField: 0

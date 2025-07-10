@@ -11,6 +11,7 @@ public class BaseProx : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gameControl = GameObject.Find("Brain").GetComponent<GameControl>();
         if (collision.gameObject.tag == "Player")
         {
             gameControl.SetInBase(true);
