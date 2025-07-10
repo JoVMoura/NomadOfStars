@@ -855,6 +855,10 @@ PrefabInstance:
       value: Base
       objectReference: {fileID: 0}
     - target: {fileID: 7229080201800150317, guid: 7a26e38c978b7ef4bb374f59593b630f, type: 3}
+      propertyPath: uiControl
+      value: 
+      objectReference: {fileID: 1913339292}
+    - target: {fileID: 7229080201800150317, guid: 7a26e38c978b7ef4bb374f59593b630f, type: 3}
       propertyPath: waveControl
       value: 
       objectReference: {fileID: 519280824}
@@ -3580,6 +3584,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 18b9e13eddb58094fb19a4cfbca219fa, type: 2}
   - {fileID: 11400000, guid: b4c8a15ac1ff7cb4fb354bb1d32f791d, type: 2}
   - {fileID: 11400000, guid: f808c05357802714fbdb3a4c28991425, type: 2}
+  uiControl: {fileID: 1913339292}
 --- !u!114 &519280825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7217,7 +7222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1806688627}
-  ui_control: {fileID: 0}
+  ui_control: {fileID: 1913339292}
   layerMask:
     serializedVersion: 2
     m_Bits: 8
