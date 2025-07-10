@@ -22,7 +22,7 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: b857d86e481cda742b566905c25f6784, type: 2}
   structure:
-  - <prefab>k__BackingField: {fileID: 5774028870972830357, guid: 7a26e38c978b7ef4bb374f59593b630f, type: 3}
+  - <prefab>k__BackingField: {fileID: 5774028870972830357, guid: b06e2840324fb0545bff7c05d73aca5d, type: 3}
     <minAmount>k__BackingField: 1
     <maxAmount>k__BackingField: 1
     <marginX>k__BackingField: 0

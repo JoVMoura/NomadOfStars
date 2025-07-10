@@ -34,6 +34,7 @@ public class WaveControl : MonoBehaviour
         if (waveCounters[planetIndex] < 3)
         {
             // MUDANÇA: Passa o 'planetIndex' como parâmetro para a corrotina.
+            Debug.Log(planetIndex);
             StartCoroutine(WaveCoroutine(planetIndex));
         }
         else
@@ -85,7 +86,10 @@ public class WaveControl : MonoBehaviour
         }
 
         Debug.Log($"Wave {currentWaveIndex + 1} do Planeta {planetIndex + 1} finalizada.");
-        waveCounters[planetIndex]++;
+        if (waveCounters[planetIndex] < 3)
+        {
+            waveCounters[planetIndex]++;
+        }
 
         if (waveCounters[planetIndex] >= 3)
         {

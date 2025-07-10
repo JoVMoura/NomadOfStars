@@ -78,6 +78,7 @@ public class TimerControl : MonoBehaviour
         {
             // Apenas zera o tempo. A lógica no Update fará a chamada correta.
             TimeLeft[currentPlanet] = 0;
+            updateTimer(TimeLeft[currentPlanet], currentPlanet);
         }
     }
 
@@ -103,7 +104,6 @@ public class TimerControl : MonoBehaviour
             currentPlanet = planetIndex;
         }
     }
-
     void updateTimer(float currentTime, int actualTimer)
     {
         currentTime += 1;

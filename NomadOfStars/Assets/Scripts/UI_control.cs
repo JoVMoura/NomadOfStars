@@ -4,6 +4,7 @@ public class UI_control : MonoBehaviour
 {
     [SerializeField] private GameObject menuBuild;
     [SerializeField] private GameObject menuBase;
+    [SerializeField] private GameObject menuPlanetas;
     [SerializeField] private GameObject menuPause;
     [SerializeField] private GameObject menuDerrota;
     [SerializeField] private GameObject menuVitoria;
@@ -40,6 +41,18 @@ public class UI_control : MonoBehaviour
         menuPause.SetActive(false);
         menurBotes.SetActive(false);
     }
+
+    public void AbrirPlanetas()
+    {
+        menuPlanetas.SetActive(true);
+        menuBase.SetActive(false);
+    }
+
+    public void FecharPlanetas()
+    {
+        menuPlanetas.SetActive(false);
+    }
+
 
     public void AbrirDerrota()
     {
