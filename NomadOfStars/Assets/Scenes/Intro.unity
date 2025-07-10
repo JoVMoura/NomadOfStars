@@ -737,8 +737,14 @@ MonoBehaviour:
       e lutar...\"\n\n\"...para cumprir uma miss\xE3o na qual todos os outros, id\xEAnticos
       a ele, j\xE1 falharam.\""
     image: {fileID: 436504495824615717, guid: 624057cac401ed043ab0808b684ea841, type: 3}
-  - sentence: "W, A, S, D - Movimenta\xE7\xE3o do Player\nU - Abrir menu de constru\xE7\xE3o\nBot\xE3o
-      Direito do Mouse - Quebrar itens\nBot\xE3o da Nave - Iniciar coleta de energia\n"
+  - sentence: "W, A, S, D - Movimenta\xE7\xE3o do Player\nU - Abrir menu de constru\xE7\xE3o\nQ
+      - Abrir menu da nave\nBot\xE3o Direito do Mouse - Quebrar itens\nBot\xE3o da
+      Nave - Iniciar coleta de energia\n"
+    image: {fileID: 436504495824615717, guid: 624057cac401ed043ab0808b684ea841, type: 3}
+  - sentence: "Explore os planetas ao mesmo tempo para encontrar os cristais de energia
+      escondidos. Fique de olho no cron\xF4metro de cada mundo, pois quando o tempo
+      de um deles se esgotar, voc\xEA precisar\xE1 defender sua base contra as ondas
+      de inimigos que atacar\xE3o naquele planeta!"
     image: {fileID: 436504495824615717, guid: 624057cac401ed043ab0808b684ea841, type: 3}
   sceneToLoad: Jogo
 --- !u!4 &1599549123

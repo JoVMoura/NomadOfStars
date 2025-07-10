@@ -3228,7 +3228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveControl: {fileID: 519280824}
-  timeTotal: 180
+  timeTotal: 300
   txtTimer:
   - {fileID: 302168611}
   - {fileID: 734001695}

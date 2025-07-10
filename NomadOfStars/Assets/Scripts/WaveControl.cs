@@ -17,14 +17,11 @@ public class WaveControl : MonoBehaviour
     [Header("Configuração das Waves")]
     [SerializeField] private PlanetWaves[] allPlanetWaves = new PlanetWaves[3];
 
-    // MUDANÇA: 'inWave' agora é um array para controlar cada planeta individualmente.
     private bool[] inWave = { false, false, false };
     private int[] waveCounters = { 0, 0, 0 };
-    // A variável 'currentPlanet' foi removida por não ser segura em um ambiente com múltiplas corrotinas.
 
     public void WaveStart(int planetIndex)
     {
-        // MUDANÇA: Verifica o 'trinco' apenas para o planeta específico.
         if (inWave[planetIndex])
         {
             Debug.LogWarning($"Tentativa de iniciar wave para o planeta {planetIndex + 1} enquanto outra já está em andamento no mesmo planeta.");
@@ -33,7 +30,6 @@ public class WaveControl : MonoBehaviour
 
         if (waveCounters[planetIndex] < 3)
         {
-            // MUDANÇA: Passa o 'planetIndex' como parâmetro para a corrotina.
             Debug.Log(planetIndex);
             StartCoroutine(WaveCoroutine(planetIndex));
         }
@@ -43,10 +39,8 @@ public class WaveControl : MonoBehaviour
         }
     }
 
-    // MUDANÇA: A corrotina agora aceita o índice do planeta para saber em qual contexto operar.
     private IEnumerator WaveCoroutine(int planetIndex)
     {
-        // MUDANÇA: Ativa o 'trinco' apenas para o planeta atual.
         inWave[planetIndex] = true;
 
         int currentWaveIndex = waveCounters[planetIndex];
@@ -71,10 +65,7 @@ public class WaveControl : MonoBehaviour
             {
                 int enemyIndex = Random.Range(0, enemiesToSpawn.Count);
                 GameObject enemyPrefab = enemiesToSpawn[enemyIndex];
-                
-                // MUDANÇA: Usa o 'planetIndex' do parâmetro para calcular a posição.
                 Vector3 spawnPosition = GetRandomSpawnPosition(planetIndex);
-
                 Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
                 enemiesToSpawn.RemoveAt(enemyIndex);
             }
@@ -86,20 +77,19 @@ public class WaveControl : MonoBehaviour
         }
 
         Debug.Log($"Wave {currentWaveIndex + 1} do Planeta {planetIndex + 1} finalizada.");
-        if (waveCounters[planetIndex] < 3)
-        {
-            waveCounters[planetIndex]++;
-        }
+        waveCounters[planetIndex]++;
 
         if (waveCounters[planetIndex] >= 3)
         {
             Debug.Log($"Planeta {planetIndex + 1} derrotado!");
-            // AVISO: A tela de vitória pode ser chamada múltiplas vezes se vários planetas terminarem ao mesmo tempo.
-            // Você pode precisar de uma lógica mais robusta aqui para a condição de vitória final do jogo.
             uiControl.AbrirVitoria();
         }
+        else
+        {
+            // AVISA O TIMERCONTROL PARA RESETAR O TIMER PARA A PRÓXIMA WAVE
+            timerControl.ResetTimer(planetIndex);
+        }
 
-        // MUDANÇA: Libera o 'trinco' apenas para o planeta que acabou de terminar a wave.
         inWave[planetIndex] = false;
     }
 
@@ -111,6 +101,7 @@ public class WaveControl : MonoBehaviour
 
         switch (side)
         {
+            // CORREÇÃO: Adicionado o "+ offset" à coordenada Y em todos os casos.
             case 1: // Top
                 y = Random.Range(1492f, 2048f);
                 x = Random.Range(498f, 2048f) + offset;

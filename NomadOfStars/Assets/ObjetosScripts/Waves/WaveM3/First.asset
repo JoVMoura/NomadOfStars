@@ -16,4 +16,4 @@ MonoBehaviour:
   waveTime: 10
   waveData:
   - <Enemy>k__BackingField: {fileID: 3399631520865606968, guid: 7bfa30eac1d8bfb44a086f3b43fdab9c, type: 3}
-    <Amount>k__BackingField: 12
+    <Amount>k__BackingField: 10

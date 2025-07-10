@@ -15,8 +15,8 @@ public class TimerControl : MonoBehaviour
         currentPlanet = 0;
 
         TimeLeft[0] = timeTotal;
-        TimeLeft[1] = timeTotal + 6;
-        TimeLeft[2] = timeTotal + 12;
+        TimeLeft[1] = timeTotal + 60;
+        TimeLeft[2] = timeTotal + 120;
         TimerOn[0] = true;
         TimerOn[1] = true;
         TimerOn[2] = true;
@@ -35,7 +35,6 @@ public class TimerControl : MonoBehaviour
             {
                 TimeLeft[0] = 0;
                 TimerOn[0] = false;
-                // CORREÇÃO: Passando o índice do planeta 0
                 waveControl.WaveStart(0);
             }
         }
@@ -50,7 +49,6 @@ public class TimerControl : MonoBehaviour
             {
                 TimeLeft[1] = 0;
                 TimerOn[1] = false;
-                // CORREÇÃO: Passando o índice do planeta 1
                 waveControl.WaveStart(1);
             }
         }
@@ -65,36 +63,29 @@ public class TimerControl : MonoBehaviour
             {
                 TimeLeft[2] = 0;
                 TimerOn[2] = false;
-                // CORREÇÃO: Passando o índice do planeta 2
                 waveControl.WaveStart(2);
             }
         }
     }
 
-    // Método para ser chamado pelo botão do jogador
     public void StartWaveManually()
     {
         if (TimerOn[currentPlanet])
         {
-            // Apenas zera o tempo. A lógica no Update fará a chamada correta.
             TimeLeft[currentPlanet] = 0;
             updateTimer(TimeLeft[currentPlanet], currentPlanet);
         }
     }
 
-    public void ResetTimer(int timer)
+    // CORREÇÃO: Lógica do método ResetTimer simplificada e corrigida.
+    public void ResetTimer(int planetIndex)
     {
-        if (timer == 2)
+        if (planetIndex >= 0 && planetIndex < TimeLeft.Length)
         {
-            TimeLeft[timer] = timeTotal + TimeLeft[1];
+            // Simplesmente reseta o timer do planeta especificado para o valor total.
+            TimeLeft[planetIndex] = timeTotal;
+            TimerOn[planetIndex] = true;
         }
-        else
-        {
-            TimeLeft[timer] = timeTotal + TimeLeft[timer + 1];
-        }
-
-        TimerOn[timer] = true;
-        updateTimer(TimeLeft[timer], timer);
     }
 
     public void SetCurrentPlanet(int planetIndex)
@@ -104,6 +95,7 @@ public class TimerControl : MonoBehaviour
             currentPlanet = planetIndex;
         }
     }
+    
     void updateTimer(float currentTime, int actualTimer)
     {
         currentTime += 1;
