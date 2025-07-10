@@ -15,9 +15,9 @@ MonoBehaviour:
   waveDensity: 5
   waveTime: 15
   waveData:
-  - <Enemy>k__BackingField: {fileID: 3399631520865606968, guid: bcfc895b46cd92d48b48c7920bb3b272, type: 3}
+  - <Enemy>k__BackingField: {fileID: 3399631520865606968, guid: 7bfa30eac1d8bfb44a086f3b43fdab9c, type: 3}
     <Amount>k__BackingField: 27
   - <Enemy>k__BackingField: {fileID: 1863664324471721084, guid: 8ce4e0fc87b049344a3cb2973c412b71, type: 3}
     <Amount>k__BackingField: 20
-  - <Enemy>k__BackingField: {fileID: 8191579671935385039, guid: d63cd6e16dec8fd4592ef077b790d172, type: 3}
+  - <Enemy>k__BackingField: {fileID: 8191579671935385039, guid: 5d43edc0ec26dd94ba793af4a390b84c, type: 3}
     <Amount>k__BackingField: 3

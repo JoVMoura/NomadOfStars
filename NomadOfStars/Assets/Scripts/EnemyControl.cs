@@ -24,13 +24,15 @@ public class EnemyControl : MonoBehaviour
     private List<GameObject> queue = new List<GameObject>();
     private int queueSize;
 
+    [SerializeField] private string tag_nave;
+
     void Start()
     {
         actualHealth = maxHealth;
         porcent = maxHealth/100;
 
         enemyRigidbody = GetComponent<Rigidbody2D>();
-        target = GameObject.FindWithTag("Base");
+        target = GameObject.FindWithTag(tag_nave);
         move = true;
         queueSize = -1;
     }

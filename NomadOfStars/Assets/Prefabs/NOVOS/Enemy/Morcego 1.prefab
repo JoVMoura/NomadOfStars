@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 4096670111134620407}
   - component: {fileID: 1968284257981840636}
   m_Layer: 0
-  m_Name: Morcego
+  m_Name: Morcego 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   canvas: {fileID: 2760375158538152770}
   healthBar: {fileID: 2936601799513170688}
   enemyAnimator: {fileID: 7528559400951757648}
-  tag_nave: Base
+  tag_nave: Base_M2
 --- !u!61 &4096670111134620407
 BoxCollider2D:
   m_ObjectHideFlags: 0

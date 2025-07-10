@@ -345,6 +345,7 @@ MonoBehaviour:
   canvas: {fileID: 1206446400320338438}
   healthBar: {fileID: 2175271365557334596}
   enemyAnimator: {fileID: 6812304579803671060}
+  tag_nave: Base_M2
 --- !u!50 &750413608640341944
 Rigidbody2D:
   serializedVersion: 5
