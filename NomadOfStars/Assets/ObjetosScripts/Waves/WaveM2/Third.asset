@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a144a9d55bb3d31448ab4a48e9ef6cb3, type: 3}
+  m_Name: Third
+  m_EditorClassIdentifier: 
+  waveDensity: 5
+  waveTime: 15
+  waveData:
+  - <Enemy>k__BackingField: {fileID: 3399631520865606968, guid: bcfc895b46cd92d48b48c7920bb3b272, type: 3}
+    <Amount>k__BackingField: 27
+  - <Enemy>k__BackingField: {fileID: 1863664324471721084, guid: 8ce4e0fc87b049344a3cb2973c412b71, type: 3}
+    <Amount>k__BackingField: 20
+  - <Enemy>k__BackingField: {fileID: 8191579671935385039, guid: d63cd6e16dec8fd4592ef077b790d172, type: 3}
+    <Amount>k__BackingField: 3
