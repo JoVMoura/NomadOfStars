@@ -975,7 +975,6 @@ GameObject:
   - component: {fileID: 121477109}
   - component: {fileID: 121477108}
   - component: {fileID: 121477111}
-  - component: {fileID: 121477112}
   m_Layer: 0
   m_Name: Person
   m_TagString: Player
@@ -1102,20 +1101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drop_madeira: 0
   drop_pedra: 0
-  textoMadeira: {fileID: 0}
-  textoPedra: {fileID: 0}
---- !u!210 &121477112
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 121477106}
-  m_Enabled: 1
-  m_SortingLayerID: -769686325
-  m_SortingLayer: 1
-  m_SortingOrder: 1
-  m_SortAtRoot: 0
+  textoMadeira: {fileID: 548691010}
+  textoPedra: {fileID: 1183575594}
 --- !u!4 &123032783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 570094235212026067, guid: f341b121e8db4ce449fea099d0042564, type: 3}
@@ -3607,7 +3594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveControl: {fileID: 519280824}
   timeTotal: 150
-  txtTimer: {fileID: 0}
+  txtTimer: {fileID: 1394008012}
 --- !u!1 &521950626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7230,7 +7217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1806688627}
-  ui_control: {fileID: 1913339292}
+  ui_control: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -27428,7 +27415,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1913339292}
         m_TargetAssemblyTypeName: UI_control, Assembly-CSharp
         m_MethodName: AbrirPause
         m_Mode: 1
@@ -30171,7 +30158,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1913339292}
         m_TargetAssemblyTypeName: UI_control, Assembly-CSharp
         m_MethodName: FecharPause
         m_Mode: 1
@@ -30412,6 +30399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuBuild: {fileID: 1331273896}
+  menuPause: {fileID: 1493231877}
+  menuDerrota: {fileID: 555060832}
+  menuVitoria: {fileID: 1918018935}
+  menurBotes: {fileID: 1097277764}
 --- !u!1001 &1913433645
 PrefabInstance:
   m_ObjectHideFlags: 0
