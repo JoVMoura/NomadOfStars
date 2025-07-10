@@ -11,20 +11,22 @@ public class WorldCreate : MonoBehaviour
 
     void Start()
     {
-        CreateMap(0);
+
     }
 
     public void CreateMap(int nWorld)
     {
         int size = worlds[nWorld].size;
         bool[,] vet;
-        int i = 0, j = 0, k = 0, n = 0, x = 0, y = 0;
+        bool igual;
+        int i = 0, j = 0, k = 0, w = 0, n = 0, x = 0, y = 0;
         SetPiece[,] map;
         GameObject mapaAtual;
         Tilemap tileMapAtual;
         List<Tile> tileRange;
+        List<StructuresData> StructureRange;
         int somaTolal = 0;
-        List<int> numUnique, numGeneric;
+        List<int> numUnique, numGeneric, localInvX, localInvY;
         List<SetPiece> essential, unique, generic;
 
         vet = new bool[size, size];
@@ -32,6 +34,9 @@ public class WorldCreate : MonoBehaviour
 
         numUnique = new List<int>();
         numGeneric = new List<int>();
+        localInvX = new List<int>();
+        localInvY = new List<int>();
+
 
         essential = new List<SetPiece>();
         unique = new List<SetPiece>();
@@ -40,6 +45,7 @@ public class WorldCreate : MonoBehaviour
         mapaAtual = Instantiate(tilemap, grid.transform);
         tileMapAtual = mapaAtual.GetComponent<Tilemap>();
         tileRange = new List<Tile>();
+        StructureRange = new List<StructuresData>();
 
         for (i = 0; i < worlds[nWorld].setpieces.Count; i++)
         {
@@ -116,8 +122,10 @@ public class WorldCreate : MonoBehaviour
                 do
                 {
                     j = Random.Range(0, essential[i].localRange.Count);
-                    x = Random.Range(essential[i].localRange[j].minX, essential[i].localRange[j].maxX) + 1;
-                    y = Random.Range(essential[i].localRange[j].minY, essential[i].localRange[j].maxY) + 1;
+                    x = Random.Range(essential[i].localRange[j].minX, essential[i].localRange[j].maxX+1) - 1;
+                    y = Random.Range(essential[i].localRange[j].minY, essential[i].localRange[j].maxY+1) - 1;
+                    Debug.Log("X: " + x + "Y: " + y);
+                    Debug.Log("VetX: "+vet.GetLength(0)+"VetY: "+vet.GetLength(0));
                 } while (vet[x, y] == true);
             }
 
@@ -129,7 +137,7 @@ public class WorldCreate : MonoBehaviour
         essential.Clear();
         unique.Clear();
         generic.Clear();
-        
+
         i = 0;
         j = 0;
         do
@@ -148,6 +156,8 @@ public class WorldCreate : MonoBehaviour
                 }
             }
 
+            tileRange.Clear();
+
             j++;
             if (j >= size)
             {
@@ -155,5 +165,64 @@ public class WorldCreate : MonoBehaviour
                 j = 0;
             }
         } while (i < size);
+        
+        i = 0;
+        j = 0;
+        do
+        {
+            if(map[i, j].structure.Count != 0)
+            {
+                for (k = 0; k < map[i, j].structure.Count; k++)
+                {
+                    if(map[i, j].structure[k].center)
+                    {
+                        Instantiate(map[i, j].structure[k].prefab, new Vector3(128+(i*254),128+(j*254),0), Quaternion.identity);
+                    }
+                    else
+                    {
+                        n = Random.Range(map[i, j].structure[k].minAmount,map[i, j].structure[k].maxAmount+1);
+                        for(w = 0; w < n; w++)
+                        {
+                            igual = false;
+                            do
+                            {
+                                x = Random.Range(10, 247);
+                                y = Random.Range(10, 247);
+                                /*foreach (int invX in localInvX)
+                                {
+                                    if (x == invX)
+                                    {
+                                        igual = true;
+                                    }
+                                }
+                                if (!igual)
+                                {
+                                    foreach (int invY in localInvY)
+                                    {
+                                        if (y == invY)
+                                        {
+                                            igual = true;
+                                        }
+                                    }
+                                }*/
+                            } while (igual);
+                            Instantiate(map[i, j].structure[k].prefab, new Vector3(x+(i*254),y+(j*254),0), Quaternion.identity);
+                            localInvX.Add(x);
+                            localInvY.Add(y);
+                        }
+                    }
+                }
+                localInvX.Clear();
+                localInvY.Clear();
+            }
+
+            j++;
+            if (j >= size)
+            {
+                i++;
+                j = 0;
+            }
+        } while (i < size);
+        
     } 
 }
