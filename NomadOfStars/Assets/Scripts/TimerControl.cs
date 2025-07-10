@@ -13,9 +13,11 @@ public class TimerControl : MonoBehaviour
    
     void Start()
     {
+        currentPlanet = 0;
+
         TimeLeft[0] = timeTotal;
-        TimeLeft[1] = timeTotal+1;
-        TimeLeft[2] = timeTotal+1;
+        TimeLeft[1] = timeTotal+60;
+        TimeLeft[2] = timeTotal+120;
         TimerOn[0] = true;
         TimerOn[1] = true;
         TimerOn[2] = true;
@@ -37,31 +39,31 @@ public class TimerControl : MonoBehaviour
                 waveControl.WaveStart();
             }
         }
-        if (TimerOn[0])
+        if (TimerOn[1])
         {
-            if (TimeLeft[0] > 0)
+            if (TimeLeft[1] > 0)
             {
-                TimeLeft[0] -= Time.deltaTime;
-                updateTimer(TimeLeft[0], 0);
+                TimeLeft[1] -= Time.deltaTime;
+                updateTimer(TimeLeft[1], 1);
             }
             else
             {
-                TimeLeft[0] = 0;
-                TimerOn[0] = false;
+                TimeLeft[1] = 0;
+                TimerOn[1] = false;
                 waveControl.WaveStart();
             }
         }
-        if (TimerOn[0])
+        if (TimerOn[2])
         {
-            if (TimeLeft[0] > 0)
+            if (TimeLeft[2] > 0)
             {
-                TimeLeft[0] -= Time.deltaTime;
-                updateTimer(TimeLeft[0], 0);
+                TimeLeft[2] -= Time.deltaTime;
+                updateTimer(TimeLeft[2], 2);
             }
             else
             {
-                TimeLeft[0] = 0;
-                TimerOn[0] = false;
+                TimeLeft[2] = 0;
+                TimerOn[2] = false;
                 waveControl.WaveStart();
             }
         }
@@ -82,20 +84,30 @@ public class TimerControl : MonoBehaviour
         updateTimer(TimeLeft[timer], timer);
     }
 
-    public void ClearTimer(int timer)
+    public void ClearTimer()
     {
-        TimeLeft[timer] = 0;
-        TimerOn[timer] = false;
-        updateTimer(TimeLeft[timer], timer);
+        TimeLeft[currentPlanet] = 0;
+        TimerOn[currentPlanet] = false;
+        updateTimer(TimeLeft[currentPlanet], currentPlanet);
     }
 
     void updateTimer(float currentTime, int actualTimer)
     {
         currentTime += 1;
-
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        txtTimer[actualTimer].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (actualTimer == currentPlanet)
+        {
+            txtTimer[0].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        else if (currentPlanet == actualTimer - 1 || currentPlanet == actualTimer + 2)
+        {
+            txtTimer[1].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+        else
+        {
+            txtTimer[2].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
 }
