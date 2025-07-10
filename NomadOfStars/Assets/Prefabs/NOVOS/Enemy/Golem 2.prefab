@@ -671,6 +671,7 @@ MonoBehaviour:
   canvas: {fileID: 5349430162481283457}
   healthBar: {fileID: 1920662034469287917}
   enemyAnimator: {fileID: 7525980883270613135}
+  tag_nave: Base_M2
 --- !u!61 &-3556218737993757024
 BoxCollider2D:
   m_ObjectHideFlags: 0

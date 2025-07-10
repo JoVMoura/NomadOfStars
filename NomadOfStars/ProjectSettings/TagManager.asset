@@ -10,6 +10,8 @@ TagManager:
   - Tower
   - Base
   - Enemy
+  - Base_M2
+  - Base_M3
   layers:
   - Default
   - TransparentFX
