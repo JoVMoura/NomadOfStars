@@ -3,6 +3,7 @@ using UnityEngine;
 public class UI_control : MonoBehaviour
 {
     [SerializeField] private GameObject menuBuild;
+    [SerializeField] private GameObject menuBase;
     [SerializeField] private GameObject menuPause;
     [SerializeField] private GameObject menuDerrota;
     [SerializeField] private GameObject menuVitoria;
@@ -16,6 +17,16 @@ public class UI_control : MonoBehaviour
     public void FecharBuild()
     {
         menuBuild.SetActive(false);
+    }
+
+    public void AbriBase()
+    {
+        menuBase.SetActive(true);
+    }
+
+    public void FecharBase()
+    {
+        menuBase.SetActive(false);
     }
 
     public void AbrirPause()
