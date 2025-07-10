@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213f20d3555573041961863bc12963a7, type: 3}
+  m_Name: MuitoMisto_1 1_M3
+  m_EditorClassIdentifier: 
+  setPieceName: Muito
+  localRange: []
+  preSetTile: 0
+  tiles:
+  - {fileID: 11400000, guid: b857d86e481cda742b566905c25f6784, type: 2}
+  structure:
+  - <prefab>k__BackingField: {fileID: 1503941104687217118, guid: c56ca640eb90d23429d3e978286e16af, type: 3}
+    <minAmount>k__BackingField: 2
+    <maxAmount>k__BackingField: 3
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0
+  - <prefab>k__BackingField: {fileID: 549259644692408456, guid: 97d819799f6eb884dab098fda3403644, type: 3}
+    <minAmount>k__BackingField: 2
+    <maxAmount>k__BackingField: 3
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0

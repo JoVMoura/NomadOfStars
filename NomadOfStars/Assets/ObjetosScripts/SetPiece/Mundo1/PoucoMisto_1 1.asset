@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213f20d3555573041961863bc12963a7, type: 3}
+  m_Name: PoucoMisto_1 1
+  m_EditorClassIdentifier: 
+  setPieceName: Pouca
+  localRange: []
+  preSetTile: 0
+  tiles:
+  - {fileID: 11400000, guid: c9df6d002f157e0459993852114baae4, type: 2}
+  structure:
+  - <prefab>k__BackingField: {fileID: 529484709890188248, guid: d09888ba48e91bc4ba150583c91172f0, type: 3}
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 2
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0
+  - <prefab>k__BackingField: {fileID: 549259644692408456, guid: 6f85d7fbb0e6705459c555dacdd3b1bf, type: 3}
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 2
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0

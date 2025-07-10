@@ -273,7 +273,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Icon_Viajar_0: 8453968596736822574
+      Icon_Viajar_1: 3314239538937910492
+      Icon_Viajar_2: 2911857821540891440
+      Icon_Viajar_3: 4945455683914657128
+      Icon_Viajar_4: -8993578558912681643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

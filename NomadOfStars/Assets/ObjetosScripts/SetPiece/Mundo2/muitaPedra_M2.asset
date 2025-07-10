@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213f20d3555573041961863bc12963a7, type: 3}
+  m_Name: muitaPedra_M2
+  m_EditorClassIdentifier: 
+  setPieceName: Muitas
+  localRange: []
+  preSetTile: 0
+  tiles:
+  - {fileID: 11400000, guid: 9f94e1349990b9949b3748d4637712f4, type: 2}
+  structure:
+  - <prefab>k__BackingField: {fileID: 1059314014271016972, guid: 809ef3bc197a09942be166f623ab443d, type: 3}
+    <minAmount>k__BackingField: 2
+    <maxAmount>k__BackingField: 4
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0
+  - <prefab>k__BackingField: {fileID: 549259644692408456, guid: d5e6b20aa4a5fb7448f04d22ac5668fd, type: 3}
+    <minAmount>k__BackingField: 2
+    <maxAmount>k__BackingField: 4
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 0

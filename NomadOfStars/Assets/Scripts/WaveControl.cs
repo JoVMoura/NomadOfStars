@@ -83,7 +83,7 @@ public class WaveControl : MonoBehaviour
 
         if(numWave < 2)
         {
-            timerControl.ResetTimer();
+            timerControl.ResetTimer(0);
         }
         else
         {

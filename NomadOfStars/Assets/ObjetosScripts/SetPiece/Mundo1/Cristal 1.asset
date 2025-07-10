@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213f20d3555573041961863bc12963a7, type: 3}
+  m_Name: Cristal 1
+  m_EditorClassIdentifier: 
+  setPieceName: 
+  localRange:
+  - <minX>k__BackingField: 1
+    <maxX>k__BackingField: 2
+    <minY>k__BackingField: 1
+    <maxY>k__BackingField: 11
+  - <minX>k__BackingField: 1
+    <maxX>k__BackingField: 11
+    <minY>k__BackingField: 1
+    <maxY>k__BackingField: 2
+  - <minX>k__BackingField: 10
+    <maxX>k__BackingField: 11
+    <minY>k__BackingField: 1
+    <maxY>k__BackingField: 11
+  - <minX>k__BackingField: 1
+    <maxX>k__BackingField: 11
+    <minY>k__BackingField: 10
+    <maxY>k__BackingField: 11
+  preSetTile: 0
+  tiles:
+  - {fileID: 11400000, guid: c9df6d002f157e0459993852114baae4, type: 2}
+  structure:
+  - <prefab>k__BackingField: {fileID: 549259644692408456, guid: 14e7bf24e5dc749478162abcf1141f58, type: 3}
+    <minAmount>k__BackingField: 1
+    <maxAmount>k__BackingField: 1
+    <marginX>k__BackingField: 0
+    <marginY>k__BackingField: 0
+    <center>k__BackingField: 1

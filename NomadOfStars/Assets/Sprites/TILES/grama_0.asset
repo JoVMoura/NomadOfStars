@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: grama_0
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 8064496040756784102, guid: 800c292f4481a3c4eb3fcee500a48cc0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   m_Transform:
     e00: 1
     e01: 0
