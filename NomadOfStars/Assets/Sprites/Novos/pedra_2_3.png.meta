@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f08fd288105f09144b1162cb139f71d5
+guid: cdafb638ec443eb46b25e2f0022c87bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5997841476510286426
-    second: Nave (1)_0
+      213: -1311690794947051657
+    second: pedra_2_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,66 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nave (1)_0
+      name: pedra_2_3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 252
-        width: 1280
-        height: 2082
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 124
+        y: 36
+        width: 382
+        height: 572
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6adff7d74f263cca0800000000000000
-      internalID: -5997841476510286426
+      spriteID: 77ff700fb20fbcde0800000000000000
+      internalID: -1311690794947051657
       vertices: []
       indices: 
       edges: []
@@ -164,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c341d2d12321d5f40a6e6c24e1ee26f6
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Nave (1)_0: -5997841476510286426
+      pedra_2_3_0: -1311690794947051657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
