@@ -37,19 +37,24 @@ public class SimpleIntroController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            currentIndex++;
+            PassarCena();
+        }
+    }
 
-            if (currentIndex < storyBlocks.Length)
-            {
-                // Mostra o próximo bloco da história
-                ShowCurrentBlock();
-            }
-            else
-            {
-                // Acabou a introdução, carrega a próxima cena
-                Debug.Log("Fim da introdução! Carregando cena: " + sceneToLoad);
-                SceneManager.LoadScene(sceneToLoad);
-            }
+    public void PassarCena()
+    {
+        currentIndex++;
+
+        if (currentIndex < storyBlocks.Length)
+        {
+            // Mostra o próximo bloco da história
+            ShowCurrentBlock();
+        }
+        else
+        {
+            // Acabou a introdução, carrega a próxima cena
+            Debug.Log("Fim da introdução! Carregando cena: " + sceneToLoad);
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 
