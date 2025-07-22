@@ -94,7 +94,7 @@ public class GameControl : MonoBehaviour
     public void PegarCristal()
     {
         cristais++;
-        txtCristais.text = "Cristais adiquiridos: " + cristais +"/3";
+        txtCristais.text = "Cristais adquiridos: " + cristais +"/3";
         if (cristais == 3)
         {
             ui_control.AbrirVitoria();
