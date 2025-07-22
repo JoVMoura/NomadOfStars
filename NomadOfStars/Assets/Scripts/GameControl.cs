@@ -36,9 +36,9 @@ public class GameControl : MonoBehaviour
             ui_control.AbriBase();
         }
     }
+
     public void SetMouseObject(GameObject _object)
     {
-        inBase = true;
         mouseObject = _object;
     }
 
@@ -99,5 +99,10 @@ public class GameControl : MonoBehaviour
         {
             ui_control.AbrirVitoria();
         }
+    }
+
+    public void Derrota()
+    {
+        ui_control.AbrirDerrota();
     }
 }

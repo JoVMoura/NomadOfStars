@@ -5,9 +5,7 @@ public class BaseControl : MonoBehaviour
 {
     [SerializeField] private TimerControl timerControl;
     [SerializeField] private WaveControl waveControl;
-
-    [SerializeField] private GameObject canvasInfo;
-    [SerializeField] private UI_control uiControl;
+    [SerializeField] private GameControl gameControl;
     [SerializeField] private GameObject canvasHB;
     [SerializeField] private Slider healthBar;
 
@@ -18,6 +16,9 @@ public class BaseControl : MonoBehaviour
 
     void Start()
     {
+        timerControl = GameObject.Find("Brain").GetComponent<TimerControl>();
+        waveControl = GameObject.Find("Brain").GetComponent<WaveControl>();
+        gameControl = GameObject.Find("Brain").GetComponent<GameControl>();
         actualHealth = maxHealth;
         porcent = maxHealth / 100;
     }
@@ -54,7 +55,7 @@ public class BaseControl : MonoBehaviour
         {
             Destroy(this.gameObject);
             // Derrota: Abre o menu de derrota
-            uiControl.AbrirDerrota();
+            gameControl.Derrota();
         }
     }
 }
