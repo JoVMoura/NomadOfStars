@@ -159,7 +159,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.29954338, y: -12.092842}
+  m_Offset: {x: -0.79024315, y: -12.092842}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.2}
@@ -169,7 +169,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 56.143215, y: 8.69883}
+  m_Size: {x: 41.77904, y: 8.69883}
   m_EdgeRadius: 0
 --- !u!50 &6712540962161125079
 Rigidbody2D:
@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a55da2f97827154cbdd419bbac738ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemysIn: []
   shotPrefab: {fileID: 2262853527205227202, guid: 6bce40109f7611e40ad204d17e1cdd69, type: 3}
   shootDelay: 2
   shootOrigin: {fileID: 2279428595131469859}

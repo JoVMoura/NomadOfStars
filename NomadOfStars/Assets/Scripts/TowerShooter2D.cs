@@ -16,8 +16,6 @@ public class TowerShooter2D : MonoBehaviour
     [SerializeField] private float maxHealth;
     private float actualHealth;
     private float porcent; 
-
-    private int enemiesCount = 0;
     private bool shooting;
 
     private void Start()

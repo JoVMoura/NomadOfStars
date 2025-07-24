@@ -9,6 +9,8 @@ public class TimerControl : MonoBehaviour
     private float[] TimeLeft = new float[3];
     private bool[] TimerOn = { false, false, false };
     [SerializeField] private TMP_Text[] txtTimer = new TMP_Text[3];
+    [SerializeField] private TMP_Text txtNavePlanetaAtual;
+    [SerializeField] private TMP_Text txtNaveOutrosPlanetas;
 
     void Start()
     {
@@ -66,6 +68,7 @@ public class TimerControl : MonoBehaviour
                 waveControl.WaveStart(2);
             }
         }
+        UpdateMenuTimer();
     }
 
     public void StartWaveManually()
@@ -95,24 +98,45 @@ public class TimerControl : MonoBehaviour
             currentPlanet = planetIndex;
         }
     }
-    
+
     void updateTimer(float currentTime, int actualTimer)
     {
-        currentTime += 1;
+        //currentTime += 1;
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        if (actualTimer == currentPlanet)
+        txtTimer[actualTimer].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void UpdateMenuTimer()
+    {
+        float minutes1, minutes2;
+        float seconds1, seconds2;
+
+        minutes1 = Mathf.FloorToInt(TimeLeft[currentPlanet] / 60);
+        seconds1 = Mathf.FloorToInt(TimeLeft[currentPlanet] % 60);
+        txtNavePlanetaAtual.text = "Tempo para horda neste planeta: " + string.Format("{0:00}:{1:00}", minutes1, seconds1);
+        if (currentPlanet == 2)
         {
-            txtTimer[0].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            minutes1 = Mathf.FloorToInt(TimeLeft[0] / 60);
+            seconds1 = Mathf.FloorToInt(TimeLeft[0] % 60);
+            minutes2 = Mathf.FloorToInt(TimeLeft[1] / 60);
+            seconds2 = Mathf.FloorToInt(TimeLeft[1] % 60);
         }
-        else if (currentPlanet == actualTimer - 1 || currentPlanet == actualTimer + 2)
+        else if (currentPlanet == 1)
         {
-            txtTimer[1].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            minutes1 = Mathf.FloorToInt(TimeLeft[2] / 60);
+            seconds1 = Mathf.FloorToInt(TimeLeft[2] % 60);
+            minutes2 = Mathf.FloorToInt(TimeLeft[0] / 60);
+            seconds2 = Mathf.FloorToInt(TimeLeft[0] % 60);
         }
         else
         {
-            txtTimer[2].text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            minutes1 = Mathf.FloorToInt(TimeLeft[1] / 60);
+            seconds1 = Mathf.FloorToInt(TimeLeft[1] % 60);
+            minutes2 = Mathf.FloorToInt(TimeLeft[2] / 60);
+            seconds2 = Mathf.FloorToInt(TimeLeft[2] % 60);
         }
+        txtNaveOutrosPlanetas.text = "Tempo para horda nos outros planetas: " + string.Format("{0:00}:{1:00}", minutes1, seconds1) + "/" + string.Format("{0:00}:{1:00}", minutes2, seconds2);
     }
 }
