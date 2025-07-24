@@ -1,6 +1,4 @@
-using TMPro;
 using UnityEngine;
-using System;
 
 public class DropItem : MonoBehaviour
 {
@@ -18,7 +16,6 @@ public class DropItem : MonoBehaviour
                 if (tipo == 1)
                 {
                     inventory.drop_madeira_count();
-
                 }
                 else if (tipo == 2)
                 {
@@ -30,8 +27,12 @@ public class DropItem : MonoBehaviour
                 }
             }
 
-            // Toca o som de pegar o item no ponto onde o objeto está
-            AudioSource.PlayClipAtPoint(pickupSound, transform.position, 10.5f);
+            // Toca o som de pegar o item usando nosso sistema centralizado
+            // O som agora vai respeitar o volume de SFX
+            if (pickupSound != null && AudioManager.instance != null)
+            {
+                AudioManager.instance.PlaySFXAtPoint(pickupSound, transform.position);
+            }
 
             // Destroi o objeto de drop
             Destroy(gameObject);

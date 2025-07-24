@@ -32,12 +32,14 @@ public class UI_control : MonoBehaviour
 
     public void AbrirPause()
     {
+        Time.timeScale = 0f;
         menuPause.SetActive(true);
         menurBotes.SetActive(true);
     }
 
     public void FecharPause()
     {
+        Time.timeScale = 1f;
         menuPause.SetActive(false);
         menurBotes.SetActive(false);
     }
@@ -77,4 +79,6 @@ public class UI_control : MonoBehaviour
         menuVitoria.SetActive(false);
         menurBotes.SetActive(false);
     }
+
+    
 }
