@@ -791,6 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyControl: {fileID: 8434597044639749305}
+  tag_nave: Base_M3
 --- !u!61 &7140724986576377768
 BoxCollider2D:
   m_ObjectHideFlags: 0
