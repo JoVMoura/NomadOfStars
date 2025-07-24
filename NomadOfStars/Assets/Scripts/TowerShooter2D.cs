@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class TowerShooter2D : MonoBehaviour
 {
+    [SerializeField]private List<GameObject> enemysIn;
     [SerializeField]private GameObject shotPrefab;
     [SerializeField]private float shootDelay;
     [SerializeField]private Transform shootOrigin;
@@ -26,9 +28,9 @@ public class TowerShooter2D : MonoBehaviour
         shooting = false;
     }
 
-    public void OnEnemyEnter()
+    public void OnEnemyEnter(GameObject Enemy)
     {
-        enemiesCount++;
+        enemysIn.Add(Enemy);
         if (shooting != true)
         {
             shooting = true;
@@ -36,21 +38,21 @@ public class TowerShooter2D : MonoBehaviour
         }
     }
 
-    public void OnEnemyExit()
+    public void OnEnemyExit(GameObject Enemy)
     {
-        enemiesCount--;
+        enemysIn.Remove(Enemy);
     }
 
     private IEnumerator ShootRoutine()
     {
-        while (enemiesCount > 0)
+        while (enemysIn.Count > 0)
         {
-            GameObject targetEnemy = GameObject.FindGameObjectWithTag("Enemy");
+            Debug.Log("Estou na rotina, esse é meu inimigo: " + enemysIn[0].name);
 
-            if (targetEnemy != null)
+            if (enemysIn[0] != null)
             {
                 GameObject newShot = Instantiate(shotPrefab, shootOrigin.position, Quaternion.identity);
-                newShot.GetComponent<BulletControl>().SetTarget(targetEnemy.transform);
+                newShot.GetComponent<BulletControl>().SetTarget(enemysIn[0].transform);
             }
             yield return new WaitForSeconds(shootDelay);
         }

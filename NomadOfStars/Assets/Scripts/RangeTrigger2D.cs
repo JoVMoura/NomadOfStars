@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RangeTrigger2D : MonoBehaviour
@@ -8,7 +9,7 @@ public class RangeTrigger2D : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            towerShooter.OnEnemyEnter();
+            towerShooter.OnEnemyEnter(collision.gameObject);
         }
     }
 
@@ -16,7 +17,7 @@ public class RangeTrigger2D : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            towerShooter.OnEnemyExit(); 
+            towerShooter.OnEnemyExit(collision.gameObject); 
         }
     }
 }
