@@ -75,7 +75,7 @@ public class EnemyControl : MonoBehaviour
                     move = true;
                 }
             }
-            else if(target.tag == "Base")
+            else if(target.tag == tag_nave)
             {
                 target.GetComponent<BaseControl>().BaseTakeDamage(damage);
             }
@@ -96,7 +96,7 @@ public class EnemyControl : MonoBehaviour
     {
         if(towerFocus)
         {
-            if(target.tag == "Base")
+            if(target.tag == tag_nave)
             {
                 queue.Add(target);
                 target = newFollowTarget;
