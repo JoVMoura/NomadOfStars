@@ -20,6 +20,7 @@ public class GameControl : MonoBehaviour
     [SerializeField] private WaveControl waveControl;
     [SerializeField] private TMP_Text txtPlanetName;
     [SerializeField] private TMP_Text txtCristais;
+    [SerializeField] private GameObject[] timerMiniMenu;
     private InputAction BaseAction;
 
     void Start()
@@ -86,7 +87,25 @@ public class GameControl : MonoBehaviour
     {
         currentPlanet = planet;
         txtPlanetName.text = "Planeta Atual: " + planetName[planet];
+
         timerControl.SetCurrentPlanet(planet);
+        timerMiniMenu[planet].transform.localPosition = new Vector3(1410, timerMiniMenu[planet].transform.localPosition.y, 0);
+        if (planet == 2)
+        {
+            timerMiniMenu[0].transform.localPosition = new Vector3(870, timerMiniMenu[planet].transform.localPosition.y, 0);
+            timerMiniMenu[1].transform.localPosition = new Vector3(330, timerMiniMenu[planet].transform.localPosition.y, 0);
+        }
+        else if (planet == 1)
+        {
+            timerMiniMenu[2].transform.localPosition = new Vector3(870, timerMiniMenu[planet].transform.localPosition.y, 0);
+            timerMiniMenu[0].transform.localPosition = new Vector3(330, timerMiniMenu[planet].transform.localPosition.y, 0);
+        }
+        else
+        {
+            timerMiniMenu[1].transform.localPosition = new Vector3(870, timerMiniMenu[planet].transform.localPosition.y, 0);
+            timerMiniMenu[2].transform.localPosition = new Vector3(330, timerMiniMenu[planet].transform.localPosition.y, 0);
+        }
+
         player.transform.position = SpawnPlanet[planet].position;
         ui_control.FecharPlanetas();
     }
