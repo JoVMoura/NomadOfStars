@@ -266,7 +266,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -2.4159088}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.1}
     oldSize: {x: 41.9, y: 53.8}
     newSize: {x: 49.4, y: 54.6}
     adaptiveTilingThreshold: 0.5
@@ -312,7 +312,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 15.08112}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.1}
     oldSize: {x: 41.9, y: 53.8}
     newSize: {x: 49.4, y: 54.6}
     adaptiveTilingThreshold: 0.5
@@ -337,7 +337,7 @@ MonoBehaviour:
   canvas: {fileID: 2433663685419515872}
   healthBar: {fileID: 2464955062725602335}
   damageType: 2
-  maxHealth: 100
+  maxHealth: 40
 --- !u!1 &3623289517447971749
 GameObject:
   m_ObjectHideFlags: 0
