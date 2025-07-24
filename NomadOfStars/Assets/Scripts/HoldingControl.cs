@@ -35,22 +35,22 @@ public class HoldingControl : MonoBehaviour
         {
             if(usable)
             {
-                item_Animator.SetBool("Use", true);
+                //item_Animator.SetBool("Use", true);
             }
         }
         else
         {
             if(usable)
             {
-                item_Animator.SetBool("Use", false);
+                //item_Animator.SetBool("Use", false);
             }
         }
 
-        if(item_Animator.GetBool("Break"))
+        /*if(item_Animator.GetBool("Break"))
         {
             gameControl.Hited();
             item_Animator.SetBool("Break", false);
-        }
+        }*/
 
         // Obtém a posição do mouse e converte para coordenadas do mundo
         mousePos = pointAction.ReadValue<Vector2>();
