@@ -134,8 +134,8 @@ public class WorldCreate : MonoBehaviour
                     j = Random.Range(0, essential[i].localRange.Count);
                     x = Random.Range(essential[i].localRange[j].minX, essential[i].localRange[j].maxX + 1) - 1;
                     y = Random.Range(essential[i].localRange[j].minY, essential[i].localRange[j].maxY + 1) - 1;
-                    Debug.Log("X: " + x + "Y: " + y);
-                    Debug.Log("VetX: " + vet.GetLength(0) + "VetY: " + vet.GetLength(0));
+                    //Debug.Log("X: " + x + "Y: " + y);
+                    //Debug.Log("VetX: " + vet.GetLength(0) + "VetY: " + vet.GetLength(0));
                 } while (vet[x, y] == true);
             }
 
