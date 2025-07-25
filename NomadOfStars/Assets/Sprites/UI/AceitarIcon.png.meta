@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AceitarIcon_0: 7247744570818190584
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

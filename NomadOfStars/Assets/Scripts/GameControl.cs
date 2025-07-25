@@ -25,6 +25,7 @@ public class GameControl : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 0f;
         cristais = 0;
         txtPlanetName.text = "Planeta Atual: " + planetName[0];
         currentPlanet = 0;

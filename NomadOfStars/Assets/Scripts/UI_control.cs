@@ -10,6 +10,10 @@ public class UI_control : MonoBehaviour
     [SerializeField] private GameObject menuVitoria;
     [SerializeField] private GameObject menurBotes;
 
+    [SerializeField] private GameObject PerguntaTutorial;
+
+    [SerializeField] private GameObject Tutorial;
+
     public void AbriBuild()
     {
         menuBuild.SetActive(true);
@@ -19,6 +23,20 @@ public class UI_control : MonoBehaviour
     {
         menuBuild.SetActive(false);
     }
+
+    public void AbrirTutorial()
+    {
+        // PerguntaTutorial.SetActive(false);
+        Tutorial.SetActive(true);
+        
+    }
+
+    public void FecharTutorial()
+    {
+        PerguntaTutorial.SetActive(false);
+        Time.timeScale = 1f;
+    }
+    
 
     public void AbriBase()
     {
