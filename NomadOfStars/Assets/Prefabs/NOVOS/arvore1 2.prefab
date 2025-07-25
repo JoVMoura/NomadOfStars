@@ -235,7 +235,7 @@ MonoBehaviour:
   canvas: {fileID: 3007251857579709813}
   healthBar: {fileID: 4049937366678043056}
   damageType: 1
-  maxHealth: 40
+  maxHealth: 150
 --- !u!1 &763874700192271656
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,9 +10,12 @@ public class HoldingControl : MonoBehaviour
     //[SerializeField] private AudioClip breakSound;
     [SerializeField] private Animator item_Animator;
 
+    [SerializeField] private ItenControl itenControl;
+
     [HideInInspector] public bool shoot;
     [HideInInspector] public bool usable;
     //private bool quebrando;
+    private bool usando;
 
     private InputAction useAction;
     private InputAction pointAction;
@@ -20,12 +23,14 @@ public class HoldingControl : MonoBehaviour
 
     void Start()
     {
+        itenControl = this.GetComponentInChildren<ItenControl>();
         useAction = InputSystem.actions.FindAction("Use");
         pointAction = InputSystem.actions.FindAction("Point");
 
         //quebrando = false;
         shoot = false;
         usable = true;
+        usando = false;
     }
 
     void Update()
@@ -33,16 +38,20 @@ public class HoldingControl : MonoBehaviour
         // Controla a animação do item
         if(useAction.IsPressed())
         {
-            if(usable)
+            if (usable)
             {
                 //item_Animator.SetBool("Use", true);
+                usando = true;
+                itenControl.UsarItem();
             }
         }
         else
         {
-            if(usable)
+            if (usable && usando)
             {
                 //item_Animator.SetBool("Use", false);
+                itenControl.ParaUsarItem();
+                usando = false;
             }
         }
 
