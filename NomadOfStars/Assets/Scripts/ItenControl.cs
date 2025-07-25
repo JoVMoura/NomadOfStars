@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using System.Collections.Generic;
-using Mono.Cecil;
+// using Mono.Cecil;
 
 public class ItenControl : MonoBehaviour
 {
@@ -24,14 +24,18 @@ public class ItenControl : MonoBehaviour
 
     public void UsarItem()
     {
-        if (foraRotina)
+        if (Time.timeScale == 1f)
         {
-            foraRotina = false;
-            StartCoroutine(UsandoLaser());
-        }
-        else if (pararRotina)
-        {
-            pararRotina = false;
+
+            if (foraRotina)
+            {
+                foraRotina = false;
+                StartCoroutine(UsandoLaser());
+            }
+            else if (pararRotina)
+            {
+                pararRotina = false;
+            }
         }
     }
 
