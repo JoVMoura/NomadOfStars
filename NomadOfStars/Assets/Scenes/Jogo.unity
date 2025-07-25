@@ -780,8 +780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185deaa9a38d1d843aa080edd2ff59ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drop_madeira: 30
-  drop_pedra: 30
+  drop_madeira: 0
+  drop_pedra: 0
   textoMadeira: {fileID: 548691010}
   textoPedra: {fileID: 1183575594}
 --- !u!210 &121477112
