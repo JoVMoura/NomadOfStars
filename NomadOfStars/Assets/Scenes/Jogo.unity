@@ -7613,6 +7613,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeTower: {fileID: 1031696017}
+  infos: {fileID: 1546835932}
+  btnVotlar: {fileID: 332885245}
+  torres:
+  - {fileID: 218292613}
+  - {fileID: 515878230}
+  - {fileID: 17190306}
   animator_Pagina: {fileID: 1041787375}
   txtTitulo: {fileID: 470091657}
   "txtDescri\xE7\xE3o":
