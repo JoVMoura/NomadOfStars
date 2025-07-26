@@ -30,6 +30,7 @@ public class MenuTorresControl : MonoBehaviour
     {
         torreAtual = numTorre;
         animator_Pagina.SetInteger("torreAtual", numTorre);
+        txtTitulo.text = titulos[numTorre];
         txtDescrição[0].text = descricao[numTorre];
         txtDescrição[1].text = descricao[numTorre];
         txtVida.text = vida[numTorre];
