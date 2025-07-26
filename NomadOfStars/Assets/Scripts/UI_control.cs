@@ -21,6 +21,7 @@ public class UI_control : MonoBehaviour
 
     public void FecharBuild()
     {
+        menuBuild.GetComponent<MenuTorresControl>().VoltarStart();
         menuBuild.SetActive(false);
     }
 

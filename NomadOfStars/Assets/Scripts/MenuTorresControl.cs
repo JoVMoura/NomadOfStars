@@ -5,6 +5,9 @@ using UnityEngine;
 public class MenuTorresControl : MonoBehaviour
 {
     [SerializeField] private PlaceTower placeTower;
+    [SerializeField] private GameObject infos;
+    [SerializeField] private GameObject btnVotlar;
+    [SerializeField] private GameObject[] torres;
     [SerializeField] private Animator animator_Pagina;
     [SerializeField] private TMP_Text txtTitulo;
     [SerializeField] private TMP_Text[] txtDescrição;
@@ -23,6 +26,11 @@ public class MenuTorresControl : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        torres[0].SetActive(true);
+        torres[1].SetActive(true);
+        torres[2].SetActive(true);
+        infos.SetActive(true);
+        btnVotlar.SetActive(true);
         torreAtual = -1;
     }
 
@@ -44,7 +52,7 @@ public class MenuTorresControl : MonoBehaviour
         torreAtual = -1;
         animator_Pagina.SetInteger("torreAtual", -1);
     }
-    
+
     public void ConstruirTorre()
     {
         if (torreAtual != -1)
@@ -52,5 +60,14 @@ public class MenuTorresControl : MonoBehaviour
             placeTower.StartPlacement(torreAtual);
             torreAtual = -1;
         }
+    }
+
+    public void VoltarStart()
+    {
+        torres[0].SetActive(true);
+        torres[1].SetActive(true);
+        torres[2].SetActive(true);
+        infos.SetActive(true);
+        btnVotlar.SetActive(true);
     }
 }
